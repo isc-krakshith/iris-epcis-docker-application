@@ -13,6 +13,7 @@ services:
     - ./back-end:/app
     - ~/IAMContainer.key:/usr/irissys/mgr/iris.key
     - ./back-end/:/irisdev/app
+    - ./back-end/src/hl7msg/in:/opt/epcis/hl7msg/in
     restart: always
 
   frontend:
@@ -24,9 +25,9 @@ services:
     - "4200:4200"
 
     # usual way to ignore node_modules subfolder
-    volumes:
-    - ./front-end:/app
-    - /fron-end/app/node_modules
+    #volumes:
+    #- ./front-end:/app
+    #- /front-end:/app/node_modules
 
     restart: always
     
