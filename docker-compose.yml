@@ -13,7 +13,6 @@ services:
     - ./back-end:/app
     - ~/IAMContainer.key:/usr/irissys/mgr/iris.key
     - ./back-end/:/irisdev/app
-    - ./back-end/src/hl7msg/in:/opt/epcis/hl7msg/in
     restart: always
 
   frontend:
