@@ -1,0 +1,28 @@
+<div class="smartphone">
+  <div class="content">
+    <button mat-button [matMenuTriggerFor]="identifyMenu">Identify</button>
+    <mat-menu #identifyMenu="matMenu" xPosition="after">
+      <button mat-menu-item (click) = "loadContent('identifyLocation')">Location</button>
+      <button mat-menu-item (click) = "loadContent('comingsoon')">Ward</button>
+    </mat-menu>
+    
+    <button mat-button [matMenuTriggerFor]="deliverMenu">Deliver</button>
+    <mat-menu #deliverMenu="matMenu" xPosition="after">
+      <button mat-menu-item (click) = "loadContent('retrieveItems')">Retrieve Items</button>
+    </mat-menu>
+    
+    <button mat-button [matMenuTriggerFor]="aboutMenu">About</button>
+    <mat-menu #aboutMenu="matMenu" xPosition="after">
+      <button mat-menu-item (click) = "loadContent('comingsoon')">EPCIS Demo</button>
+    </mat-menu>
+    <div *ngIf = isidentifyLocation>
+      <scan function="scanLocation"></scan>
+    </div>
+    </div>
+    <div *ngIf = isRetrieveItems>
+      <app-retrieve-items></app-retrieve-items>
+    </div>
+    <div *ngIf = isComingSoon>
+        <comingsoon component="smartphone"></comingsoon>
+    </div>
+    </div>

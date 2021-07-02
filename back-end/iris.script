@@ -1,0 +1,174 @@
+    ; run installer to create namespace
+    do $SYSTEM.OBJ.Load("/opt/epcis/Installer.cls", "ck")
+    set sc = ##class(App.Installer).setup() 
+
+    new $namespace
+    set namespace = "EPCIS"
+    set $namespace=namespace
+    set app = $System.CSP.GetDefaultApp(namespace) _ "/"
+    ;do EnableDeepSee^%SYS.cspServer(app)
+
+    zn "%SYS"
+    Do ##class(Security.Users).UnExpireUserPasswords("*")
+    ;assign %All role to UnknownUser
+    Do ##class(Security.Users).AddRoles("UnknownUser",("%All"))
+
+    ; create rest application
+    set webName = "/epcis"
+    write "Create rest application ",webName,!
+    set webProperties("DispatchClass") = "EPCIS.intersystems.RestService" 
+    set webProperties("NameSpace") = namespace
+    set webProperties("Enabled") = 1
+    set webProperties("PasswordAuthEnabled") = 0
+    set webProperties("UnauthenticatedEnabled") = 1
+    set webProperties("MatchRoles") = ":%All"
+    set status = ##class(Security.Applications).Create(webName, .webProperties)
+    write !,"Web application "_webName_" has been created!"
+
+    ; create rest application
+    set webName = "/query"
+    write "Create rest application ",webName,!
+    set webProperties("DispatchClass") = "EPCIS.intersystems.AppRestService" 
+    set webProperties("NameSpace") = namespace
+    set webProperties("Enabled") = 1
+    set webProperties("PasswordAuthEnabled") = 0
+    set webProperties("UnauthenticatedEnabled") = 1
+    set webProperties("MatchRoles") = ":%All"
+    set status = ##class(Security.Applications).Create(webName, .webProperties)
+    write !,"Web application "_webName_" has been created!"
+
+    ; create rest application
+    set webName = "/subscriber"
+    write "Create rest application ",webName,!
+    set webProperties("DispatchClass") = "EPCIS.intersystems.SubscriberStreamService" 
+    set webProperties("NameSpace") = namespace
+    set webProperties("Enabled") = 1
+    set webProperties("PasswordAuthEnabled") = 0
+    set webProperties("UnauthenticatedEnabled") = 1
+    set webProperties("MatchRoles") = ":%All"
+    set status = ##class(Security.Applications).Create(webName, .webProperties)
+    write !,"Web application "_webName_" has been created!"
+
+    ; create rest application
+    set webName = "/query"
+    write "Create rest application ",webName,!
+    set webProperties("DispatchClass") = "EPCIS.intersystems.AppRestService" 
+    set webProperties("NameSpace") = namespace
+    set webProperties("Enabled") = 1
+    set webProperties("PasswordAuthEnabled") = 0
+    set webProperties("UnauthenticatedEnabled") = 1
+    set webProperties("MatchRoles") = ":%All"
+    set status = ##class(Security.Applications).Create(webName, .webProperties)
+    write !,"Web application "_webName_" has been created!"
+
+    ; create rest application
+    set webName = "/passthrough"
+    write "Create rest application ",webName,!
+    set webProperties("DispatchClass") = "EnsLib.REST.GenericService" 
+    set webProperties("NameSpace") = namespace
+    set webProperties("Enabled") = 1
+    set webProperties("PasswordAuthEnabled") = 0
+    set webProperties("UnauthenticatedEnabled") = 1
+    set webProperties("MatchRoles") = ":%All"
+    set status = ##class(Security.Applications).Create(webName, .webProperties)
+    write !,"Web application "_webName_" has been created!"
+
+    ; create rest application
+    set webName = "/csp/user/epcis"
+    write "Create rest application ",webName,!
+    set webProperties("DispatchClass") = "EPCIS.intersystems.RestService" 
+    set webProperties("NameSpace") = "USER"
+    set webProperties("Enabled") = 1
+    set webProperties("PasswordAuthEnabled") = 0
+    set webProperties("UnauthenticatedEnabled") = 1
+    set webProperties("MatchRoles") = ":%All"
+    set status = ##class(Security.Applications).Create(webName, .webProperties)
+    write !,"Web application "_webName_" has been created!"
+
+    ; create rest application
+    set webName = "/epcisuser/api"
+    write "Create rest application ",webName,!
+    set webProperties("DispatchClass") = "EPCIS.intersystems.LocatorService" 
+    set webProperties("NameSpace") = "USER"
+    set webProperties("Enabled") = 1
+    set webProperties("PasswordAuthEnabled") = 0
+    set webProperties("UnauthenticatedEnabled") = 1
+    set webProperties("MatchRoles") = ":%All"
+    set status = ##class(Security.Applications).Create(webName, .webProperties)
+    write !,"Web application "_webName_" has been created!"
+
+    ;enable api/iam application
+    set appName = "/api/iam"
+    do ##class(Security.Applications).Get(appName, .appProperties)
+    set appProperties("Enabled")=1
+    do ##class(Security.Applications).Modify(appName, .appProperties)
+
+    ;enable IAM user
+    set userName = "IAM"
+    set userPW = "IAMUSER"
+    do ##class(Security.Users).Get(username, .userProperties)
+    set userProperties("PasswordExternal")=userPW
+    set userProperties("Enabled")=1
+    do ##class(Security.Users).Modify(userName, .userProperties)
+
+    do $SYSTEM.OBJ.Load("/opt/epcis/InstallerUserNS.cls", "ck")
+    set sc = ##class(App.InstallerUserNS).setup()
+
+    ; call your initial methods here
+
+    zn "USER"
+    ;EPCIS.intersystems.GLND Data
+
+    set ^EPCIS.intersystems.GLND(5055208414770) = $lb("",5055238905240,"Bickleigh Ward","","RK90023",1,1)
+    set ^EPCIS.intersystems.GLND(5055208414770,"tags","code") = "WARD"
+    set ^EPCIS.intersystems.GLND(5055208414770,"tags","description") = "Ward"
+    set ^EPCIS.intersystems.GLND(5055238905180) = $lb("",5055238905240,"Bickleigh Ward","","RK90023",1,1)
+    set ^EPCIS.intersystems.GLND(5055238905180,"tags","code") = "WARD"
+    set ^EPCIS.intersystems.GLND(5055238905180,"tags","description") = "Ward"
+    set ^EPCIS.intersystems.GLND(5055238905190) = $lb("",5055238905240,"Bickleigh Ward","","RK90023",1,1)
+    set ^EPCIS.intersystems.GLND(5055238905190,"tags","code") = "WARD"
+    set ^EPCIS.intersystems.GLND(5055238905190,"tags","description") = "Ward"
+    set ^EPCIS.intersystems.GLND(5055238905200) = $lb("",5055238905200,"Monkswell Ward collection slot",$lb($lb("5055238905340")),"",1,1)
+    set ^EPCIS.intersystems.GLND(5055238905200,"tags","code") = "WARD"
+    set ^EPCIS.intersystems.GLND(5055238905200,"tags","description") = "Ward"
+    set ^EPCIS.intersystems.GLND(5055238905240) = $lb("",5055238905240,"Bickleigh Ward","","RK90023",1,1)
+    set ^EPCIS.intersystems.GLND(5055238905240,"tags","code") = "WARD"
+    set ^EPCIS.intersystems.GLND(5055238905240,"tags","description") = "Ward"
+    set ^EPCIS.intersystems.GLND(5055238905340) = $lb("",5055238905340,"Monkswell Ward","","RK90034",1,1)
+    set ^EPCIS.intersystems.GLND(50552389053400) = $lb("",5055238905340,"Monkswell Ward","","RK90034",1,1)
+    set ^EPCIS.intersystems.GLND(50552084000950346) = $lb("",50552084000950346,"Monkswell Ward, Zone E, Level 10","","RK95034",1,"")
+
+    ; EPCIS.intersystems.GLNI Indices
+
+    set ^EPCIS.intersystems.GLNI("fnCodeIndex"," RK90023",5055238905240) = ""
+    set ^EPCIS.intersystems.GLNI("fnCodeIndex"," RK95034",50552084000950346) = ""
+
+    zn "%SYS"
+    ; make enslib RW
+    s db=##Class(SYS.Database).%OpenId("/usr/irissys/mgr/enslib")
+    s db.ReadOnly=0
+    d db.%Save()
+
+    do $SYSTEM.OBJ.Load("/opt/epcis/InstallerHSLIBNS.cls", "ck")
+    set sc = ##class(App.InstallerHSLIBNS).setup()
+
+    ;setup foundation Health namespace
+    zn "HSLIB"
+    set status = ##class(HS.HC.Util.Installer).InstallFoundation("EPCIS")
+    ;install FHIR in namespace
+    zn "EPCIS"
+    do ##class(HS.FHIRServer.Installer).InstallNamespace("EPCIS")
+    ;install FHIR instance
+    set appKey = "/MyFHIRApp/fhir/r4"
+    set strategyClass = "HS.FHIRServer.Storage.Json.InteractionsStrategy"
+    set metadataConfigKey = "HL7v40"
+    do ##class(HS.FHIRServer.Installer).InstallInstance(appKey, strategyClass, metadataConfigKey)
+
+    ;start production
+    set production = "EPCIS.intersystems.Production"
+    set ^Ens.Configuration("csp","LastProduction") = production
+    do ##class(Ens.Director).SetAutoStart(production)
+    do ##class(Ens.Director).StartProduction(production)
+    set sc = 1
+
+    halt

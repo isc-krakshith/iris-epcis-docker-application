@@ -1,0 +1,38 @@
+<div class="tablet">
+  <div class="content">
+<button mat-button [matMenuTriggerFor]="stockMenu">Stock</button>
+<mat-menu #stockMenu="matMenu" xPosition="after">
+  <button mat-menu-item (click) = "loadContent('comingsoon')">Inventory</button>
+  <button mat-menu-item (click) = "loadContent('comingsoon')">On Order</button>
+</mat-menu>
+
+<button mat-button [matMenuTriggerFor]="linkMenu">Link</button>
+<mat-menu #linkMenu="matMenu" xPosition="after"
+    [overlapTrigger]="false">
+  <button mat-menu-item (click) = "loadContent('scanDischarge')">Discharge Document</button>
+  <button mat-menu-item (click) = "loadContent('scanPigeonHole')">Pigeon-hole</button>
+</mat-menu>
+
+<button mat-button [matMenuTriggerFor]="lookupMenu">Dispense</button>
+<mat-menu #lookupMenu="matMenu" xPosition="after">
+  <button mat-menu-item (click) = "loadContent('genlabel')">Generate Label</button>
+  <button mat-menu-item (click) = "loadContent('comingsoon')">Print</button>
+</mat-menu>
+
+<button mat-button [matMenuTriggerFor]="aboutMenu">About</button>
+<mat-menu #aboutMenu="matMenu" xPosition="after">
+  <button mat-menu-item (click) = "loadContent('comingsoon')">EPCIS Demo</button>
+</mat-menu>
+<div *ngIf = isScanDischarge>
+  <scan function="discharge"></scan>
+</div>
+<div *ngIf = isScanPigeonHole>
+  <scan function="pigeonHole"></scan>
+</div>
+<div *ngIf = isComingSoon>
+    <comingsoon component="tablet"></comingsoon>
+</div>
+<div *ngIf = isGenLabel>
+    <pharmacy-gen-label></pharmacy-gen-label>
+</div>
+</div>

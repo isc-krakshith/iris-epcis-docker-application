@@ -1,0 +1,66 @@
+<div class="gen-label-form">
+    <form [formGroup]= "genLabelForm" (ngSubmit)="onSubmit()">
+        <table cellspacing="0">
+            <tr>
+                <h2 class = form-header>Generate Label</h2>
+            </tr>
+            <tr>
+                <td>
+                <div class = full-width>
+                    <mat-form-field>
+                        <mat-label>PAS</mat-label>
+                        <input matInput formControlName="pas">
+                    </mat-form-field>
+                </div>
+                </td>
+                <td>
+                <div class = full-width>
+                    <mat-form-field>
+                        <mat-label>Date</mat-label>
+                        <input matInput [matDatepicker]="picker" formControlName="date">
+                        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                        <mat-datepicker #picker></mat-datepicker>
+                    </mat-form-field>
+                </div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                <div class="entry-button-wrapper">
+                    <button mat-raised-button color="primary" type = submit (click)="getSpId()"[disabled]="disableSpellButton">Retrieve Inpatient Spell Id</button>
+                </div>
+                </td>
+                <td>
+                <div class = full-width>
+                    <mat-form-field>
+                        <mat-label>Inpatient Spell</mat-label>
+                        <input matInput formControlName="inSpId" readonly>
+                    </mat-form-field>
+                </div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                <div class="entry-button-wrapper">
+                    <button mat-raised-button color="primary" type = submit (click)="getLocId()" [disabled]="disableLocationButton">Retrieve Patient Location Id</button>
+                </div>
+                </td>
+                <td>
+                <div class = full-width>
+                    <mat-form-field [style.width.px]="310">
+                        <mat-label>Patient Location</mat-label>
+                        <input matInput formControlName="locId" readonly>
+                    </mat-form-field>
+                </div>
+                </td>
+            </tr>
+        </table>
+    </form>
+    <div class="genlabel-button-wrapper">
+        <button mat-raised-button color="primary" type = submit (click)="genLabel()" [disabled]="disableGenerateLabelButton">Generate Pharmacy Label</button>
+    </div>
+    <div *ngIf="displayLabel">
+        <img class = "prescription-label" [src]="imageSource" width="200"/>
+    </div>
+</div>
+  

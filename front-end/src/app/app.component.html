@@ -1,0 +1,40 @@
+<img src="assets/img/EPCISLogo8.jpg" width="250">
+<mat-tab-group dynamicHeight>
+  <mat-tab>
+    <div class="adt-screen mat-elevation-z4">
+    <ng-template mat-tab-label>
+      ADMISSION / DISCHARGE
+    </ng-template>
+    <app-admission-form></app-admission-form>
+    </div>
+  </mat-tab>
+
+  <mat-tab>
+    <div class="pharmacy-screen mat-elevation-z4">
+    <ng-template mat-tab-label>
+      PHARMACY
+    </ng-template>
+    <app-pharmacy-ui></app-pharmacy-ui>
+    </div>
+  </mat-tab>
+
+  <mat-tab>
+    <div class="runner-screen mat-elevation-z4">
+    <ng-template mat-tab-label>
+      RUNNER APP
+    </ng-template>
+    <app-runner-app></app-runner-app>
+    </div>
+  </mat-tab>
+
+  <mat-tab>
+    <div class="mat-elevation-z4">
+    <ng-template mat-tab-label>
+      REST CALL LOGS
+    </ng-template>
+    <div class="main-content">
+      <app-messages></app-messages>
+    </div>
+    </div>
+  </mat-tab>
+</mat-tab-group>

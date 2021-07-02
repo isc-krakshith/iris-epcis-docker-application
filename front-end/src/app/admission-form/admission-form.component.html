@@ -1,0 +1,64 @@
+<div class="admission-form">
+    <form [formGroup]= "admitForm" (ngSubmit)="onSubmit()">
+        <table cellspacing="0">
+            <tr>
+                <h2>ADT Entry</h2>
+                <!--<div class = page-heading>Patient Admission</div>-->
+            </tr>
+            <tr>
+                <td>
+                <div class = full-width>
+                <mat-form-field>
+                    <mat-label>MRN</mat-label>
+                    <input matInput formControlName="mrn">
+                </mat-form-field>
+                </div>
+                </td>
+                <td>
+                    <div class = full-width>
+                        <mat-form-field>
+                            <mat-label>Date</mat-label>
+                            <input matInput [matDatepicker]="picker" formControlName="date">
+                            <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                            <mat-datepicker #picker></mat-datepicker>
+                          </mat-form-field>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <div class = "full-width">
+                    <mat-form-field>
+                        <mat-label>First Name</mat-label>
+                    <input matInput formControlName="firstName">
+                    </mat-form-field>
+                    </div>
+                </td>
+                <td>
+                <div class = "full-width">
+                    <mat-form-field>
+                        <mat-label>Last Name</mat-label>
+                    <input matInput formControlName="lastName">
+                    </mat-form-field>
+                </div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <div class="entry-button-wrapper">
+                        <button mat-raised-button color="primary" type = submit (click)="admit()">Admit Patient</button>
+                    </div>
+                </td>
+            <td>
+                <div class="entry-button-wrapper">
+                    <button mat-raised-button color="primary" type = submit (click)="discharge()">Discharge Patient</button>
+                </div>
+            </td>
+            </tr>
+        </table>
+    </form>
+    <p>
+    <!--{{ admitForm.value.firstName }} {{ admitForm.value.lastName }} {{ admitForm.value.mrn }} {{admitForm.value.date}}-->
+    </p>
+</div>
+  

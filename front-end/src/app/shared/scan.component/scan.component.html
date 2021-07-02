@@ -1,0 +1,14 @@
+<div>
+    <button class = "scan-button" id = "scanButton" mat-raised-button color="primary"(click)="onClick()" [disabled]="counter == 2">Scan</button>
+</div>
+<div>
+    <img class = "scan-doc" id= "scanDoc" [@fade]="state" [src]="imageSource"/>
+</div>
+<div *ngIf = "isScanLocation">
+    <form [formGroup]= "scanForm">
+        <mat-form-field class="full-width" appearance="outline">
+            <mat-label>Location Friendly Name</mat-label>
+            <input matInput formControlName="locFrName" placeholder = "wait" readonly>
+        </mat-form-field>
+    </form>
+</div>

@@ -1,0 +1,16 @@
+.scan-doc {
+  margin-top: 20px;
+  border: 10px solid #999;
+  border-radius: 4px;
+  margin-left: 90px;
+  }
+.scan-button {
+  margin-top: 20px;
+  margin-left: 270px;
+}
+
+.full-width {
+  width: 95%;
+  color: grey;
+  margin-left: 2%;
+}

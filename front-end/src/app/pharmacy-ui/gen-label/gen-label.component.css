@@ -1,0 +1,46 @@
+table {
+  margin-left:20px;
+  width: 100%;
+}
+  
+.form-header{
+  color:black;
+  text-align: left;
+}
+  
+.entry-button-wrapper{
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+  
+.genlabel-button-wrapper{
+  margin-top: 10px;
+  margin-bottom: 20px;
+  margin-left: 20px;
+}
+
+.page-heading {
+  /*color: #3F51B5;
+  color: grey;*/
+  font-size:24pt;
+  font-weight: bold;
+  margin-left: 0%;
+  margin-bottom: 20px;
+}
+
+.full-width {
+  width: 95%;
+  color: grey;
+}
+
+.half-width {
+  width: 48%;
+  color: grey;
+}
+
+.prescription-label {
+  margin-top: 10px;
+  border: 8px solid #999;
+  border-radius: 4px;
+  margin-left: 20px;
+  }

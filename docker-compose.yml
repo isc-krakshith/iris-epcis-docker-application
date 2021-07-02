@@ -1,0 +1,37 @@
+version: '3.2'
+
+services:
+  backend:
+    build:
+      dockerfile: Dockerfile
+      context: back-end
+    container_name: backend
+    ports:
+    - "51773:51773"
+    - "52773:52773"
+    volumes:
+    - ./back-end:/app
+    - ~/IAMContainer.key:/usr/irissys/mgr/iris.key
+    - ./back-end/:/irisdev/app
+    - ./back-end/src/hl7msg/in:/opt/epcis/hl7msg/in
+    restart: always
+
+  frontend:
+    build:
+      dockerfile: Dockerfile
+      context: front-end
+    container_name: frontend
+    ports:
+    - "4200:4200"
+
+    # usual way to ignore node_modules subfolder
+    volumes:
+    - ./front-end:/app
+    - /fron-end/app/node_modules
+
+    restart: always
+    
+    # workaround to Docker issue https://github.com/moby/moby/issues/38564
+  #  volumes:
+  #  - ./front-end/e2e:/app/e2e
+  #  - ./front-end/src:/app/src
