@@ -2,7 +2,7 @@
     do $SYSTEM.OBJ.Load("/opt/epcis/Installer.cls", "ck")
     set sc = ##class(App.Installer).setup() 
 
-    new $namespace
+    new namespace
     set namespace = "EPCIS"
     set $namespace=namespace
     set app = $System.CSP.GetDefaultApp(namespace) _ "/"
