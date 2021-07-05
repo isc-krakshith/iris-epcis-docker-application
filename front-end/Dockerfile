@@ -7,7 +7,7 @@ WORKDIR /app
 COPY package*.json /app/
 USER root
 RUN npm install
-
+RUN apk add --update gettext
 # run dev server
 COPY . /app
 CMD ["npm", "start", "--", "--host", "0.0.0.0", "--poll", "500"]
