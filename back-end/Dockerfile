@@ -11,18 +11,23 @@ RUN	mkdir -p /external/data && \
 	chmod -R g+w /external
 
 WORKDIR /opt/epcis
-RUN chown ${ISC_PACKAGE_MGRUSER}:${ISC_PACKAGE_IRISGROUP} /opt/epcis
-USER ${ISC_PACKAGE_MGRUSER}
 
 COPY  Installer.cls .
-COPY InstallerUserNS.cls .
-COPY InstallerHSLIBNS.cls .
+COPY  InstallerUserNS.cls .
+COPY  InstallerHSLIBNS.cls .
 COPY  src/epcis /opt/epcis/epcis
 COPY  src/user /opt/epcis/user
-COPY src/hslib /opt/epcis/hslib
-COPY  src/hl7msg /opt/epcis/hl7msg
+COPY  src/hslib /opt/epcis/hslib
+COPY  iris.script /tmp/iris.script
 
-COPY iris.script /tmp/iris.script
+RUN mkdir /opt/epcis/hl7msg
+RUN mkdir /opt/epcis/hl7msg/in
+RUN chown ${ISC_PACKAGE_MGRUSER}:${ISC_PACKAGE_IRISGROUP} /opt/epcis/hl7msg/in
+RUN chown ${ISC_PACKAGE_MGRUSER}:${ISC_PACKAGE_IRISGROUP} /opt/epcis/hl7msg
+RUN chown ${ISC_PACKAGE_MGRUSER}:${ISC_PACKAGE_IRISGROUP} /opt/epcis
+RUN chmod ugo+rwx /opt/epcis/hl7msg/in
+
+USER ${ISC_PACKAGE_MGRUSER}
 
 # run iris and initial 
 RUN iris start $ISC_PACKAGE_INSTANCENAME \
