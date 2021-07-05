@@ -1,3 +1,8 @@
+# In order to set front-end to connect with the desired IRIS service
+# set the following environment variable before calling docker-compose
+# export HOST_IP = "<IP ADDRESS OF HOST WHERE IRIS INSTANCE IS RUNNING>"
+
+
 version: '3.2'
 
 services:
@@ -13,10 +18,12 @@ services:
     - ./back-end:/app
     - ~/IAMContainer.key:/usr/irissys/mgr/iris.key
     - ./back-end/:/irisdev/app
-    - ./back-end/src/hl7msg/in:/opt/epcis/hl7msg/in
+    #- ./back-end/src/hl7msg/in:/opt/epcis/hl7msg/in
     restart: always
 
   frontend:
+    environment:
+    - ENV_BACKEND_URI=${HOST_IP}
     build:
       dockerfile: Dockerfile
       context: front-end
@@ -32,6 +39,6 @@ services:
     restart: always
     
     # workaround to Docker issue https://github.com/moby/moby/issues/38564
-  #  volumes:
-  #  - ./front-end/e2e:/app/e2e
-  #  - ./front-end/src:/app/src
+    #volumes:
+    #- ./front-end/e2e:/app/e2e
+    #- ./front-end/src:/app/src
