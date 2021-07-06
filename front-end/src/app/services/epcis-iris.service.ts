@@ -33,8 +33,14 @@ export class EPCISIRISService {
     //when the front end is run in an angular container
     //environment.apiURL will be an empty string IF backend IP address
     //is not provided to ng at build time, environment variable HOST_IP
-    if (environment.apiURL==="") {
-      return 'http://localhost'
+    if (environment.apiURL==="localhost") {
+      //If it is set to 'localhost', it is still possible that
+      //that the angular content is being served remotely
+      //Then the most reliable way to find the IP address of the container
+      //is to read it from the browser adddress bar
+      // so return the substring between 'http://' and the port marker ':' */
+      let url = location.toString()
+      return url.substr(7,(url.indexOf(':',7)-7));
     }
     else {
       return 'http://'+environment.apiURL;
