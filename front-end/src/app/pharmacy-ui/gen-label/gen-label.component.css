@@ -19,6 +19,9 @@ table {
   margin-left: 20px;
 }
 
+.gen-label-button {
+  min-width: 200px !important;
+}
 .page-heading {
   /*color: #3F51B5;
   color: grey;*/
