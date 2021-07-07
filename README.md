@@ -12,25 +12,21 @@ $ git clone https://github.com/isc-krakshith/iris-epcis-docker-application.git
 ```
 
 ### Open the terminal in this directory:
-#### Export an environment varaible called HOST_IP with the IPv4 address of the host where the IRIS (and Angular) containers will run. eg. On Unix hosts... 
-
+#### (OPTIONAL) The two containers may be run on different hosts by commenting out the appropriate service in  docker-compose.yml. In such a deployment, the Angular container will look for an environment varaible called HOST_IP specifying the IPv4 address of the host where the IRIS container will run. eg. On Unix hosts... 
 ```
 export HOST_IP="XXX.XXX.XXX.XXX"
 ```
 #### Build the containers
-
 ```
 $ docker-compose build
 ```
 
-#### Run Angular front-end and IRIS backend containers in a single project:
-
+#### Run Angular front-end and IRIS backend containers:
 ```
 $ docker-compose up -d
 ```
 
-Once the containers are up and running, go to http://localhost:4200 to get to the UI home page
-
+Once the containers are up and running, go to http://localhost:4200 to get to the UI home page. If Angular front end is deployed remotely, replace 'localhost' with external IP address of the remote host.
 
 IRIS backend container provides the REST endpoints to serve the angular frontend.
 
