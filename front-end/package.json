@@ -1,9 +1,8 @@
 {
   "name": "epcis-app",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "scripts": {
     "ng": "ng",
-    "prestart": "envsubst < src/environments/environment.template.ts > src/environments/environment.ts",
     "start": "ng serve",
     "build": "ng build",
     "test": "ng test",

@@ -1,0 +1,21 @@
+<div class="container">
+    <img class="presImg" src = "/assets/img/EPCISPresentation.jpg">
+    <div class = "btn">
+        <button mat-icon-button type="button" class = "adtBtn" color="transparent" (click)='moveToSelectedTab("ADMISSION / DISCHARGE")'>[ ]</button>
+        <button mat-icon-button type="button" class = "pharmBtn" color="transparent" (click)='moveToSelectedTab("PHARMACY")'>[ ]</button>
+        <button mat-icon-button type="button" class = "runBtn" color="transparent" (click)='moveToSelectedTab("RUNNER APP")'>[ ]</button>
+        <button mat-icon-button type="button" class= "prodBtn" color="transparent" (click)="openInNewTab('production')">[ ]</button>
+    </div>
+    <div class ="navBtnGroup">
+        <button mat-raised-button type="button" color="warn" (click)='moveToSelectedTab("ADMISSION / DISCHARGE")'>Open ADT</button>
+        <button mat-raised-button type="button" color="warn" (click)='moveToSelectedTab("PHARMACY")'>Open Pharmacy UI</button>
+        <button mat-raised-button type="button" color="warn" (click)='moveToSelectedTab("RUNNER APP")'>Open Runner App</button>
+        <button mat-raised-button type="button" color="warn" (click)='moveToSelectedTab("REST CALL LOGS")'>Open Logs</button>
+        <button mat-raised-button color="primary"(click)="openInNewTab('production')" >Open Production</button>
+        <button mat-raised-button color="primary"(click)="openInNewTab('messages')" >Open Messages</button>
+        <button id = "showHideButton" mat-raised-button color="primary"(click)="onShowHide()" >Show Instructions</button>
+    </div>
+</div>
+<div *ngIf = showInstructions>
+    <app-instructions></app-instructions>
+</div>

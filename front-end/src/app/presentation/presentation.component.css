@@ -1,0 +1,68 @@
+.container {
+  position:relative;
+}
+.page-heading {
+  /*color: #3F51B5;
+  color: grey;*/
+  font-size:24pt;
+  font-weight: bold;
+  margin-left: 0%;
+  margin-bottom: 20px;
+}
+
+.presImg {
+  position: relative;
+  max-width:100%;
+  height:auto;
+}
+
+.btn {
+  background: 'transparent';
+}
+
+.adtBtn {
+  position: absolute;
+  background: 'transparent';
+  min-width: 100px!important;
+  font-size:48pt;
+  left: 7%;
+  top: 24%;
+  color: transparent;
+}
+
+.pharmBtn {
+  position: absolute;
+  background: 'transparent';
+  min-width: 100px!important;
+  font-size:48pt;
+  left:32%;
+  top:24%;
+  color: transparent;
+}
+
+.runBtn {
+  position: absolute;
+  background: 'transparent';
+  min-width: 100px!important;
+  font-size:48pt;
+  left:65%;
+  top:25%;
+  color: transparent;
+}
+
+.prodBtn {
+  position: absolute;
+  background: 'transparent';
+  min-width: 100px!important;
+  font-size:48pt;
+  left:50%;
+  top:65%;
+  color: transparent;  
+}
+
+.navBtnGroup {
+  margin: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}

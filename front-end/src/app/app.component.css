@@ -38,33 +38,37 @@
     align-content: right;
   }
 
-  .runner-screen, .adt-screen, .pharmacy-screen {
+  .presentation-screen, .adt-screen, .runner-screen, .pharmacy-screen {
     display: flex;
     align-items: center;
     justify-content:center;
     margin: 16px;
     padding: 16px;
-    border-radius: 8px;
-  }
-  
-  .runner-screen {
-    height: 750px;
-    width: 380px;
-    border-radius: 36px;
+    border-radius: 20px;
   }
   
   .adt-screen {
     height: 300px;
     width: 450px;
   }
-
+  
   .pharmacy-screen {
     height: 910px;
     width: 630px;
     border-radius: 36px;
   }
 
+  .runner-screen {
+    height: 750px;
+    width: 380px;
+    border-radius: 36px;
+  }
+
   .large-box {
     height: 400px;
     width: 400px;
+  }
+
+  code, pre, xmp, kbd {
+    font-family: 'Roboto Mono', Courier New, Courier, monospace;
   }

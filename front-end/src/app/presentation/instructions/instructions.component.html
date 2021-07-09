@@ -1,0 +1,185 @@
+<h2>Introduction</h2>
+
+<p>This is a demonstration of an EPCIS (Electronic Product Code Implementation Services, a global GS1 standard) solution serving the healthcare sector built on the InterSystems IRIS for Health data platform. It addresses medicine tracking in a hospital where the benefits are mainly the efficiency of managing the delivery of pharmaceutical prescriptions to inpatients who may be potentially transferring between departments, being or have been discharged.</p>
+
+<h2>Use case</h2>
+
+<p>In its current version, the use case is a patient who is being discharged, but has not yet left the ward, and is required to take away their medications on discharge. At this facility, it is the duty of a designated runner to assimilate all pharmaceutical prescriptions for the patient and deliver them.</p>
+
+<h3>Information</h3>
+
+<p>For this purpose, they need to access to the following information:</p>
+
+<ol>
+	<li>A patient&rsquo;s prescription</li>
+	<li>The location(s) from where the prescriptions are to be collected</li>
+	<li>The patient&rsquo;s current location</li>
+</ol>
+
+<h2>Events</h2>
+
+<p>The events covered in this demonstration are:</p>
+
+<ol>
+	<li>A patient is admitted to hospital
+	<ol class="list-lower-alpha">
+		<li>This generates a HL7v2 message which triggers:
+		<ol class="list-lower-roman">
+			<li>Inpatient spell id generation (provide GS1 term&hellip;)</li>
+			<li>Inpatient ward-stay id generation (provide GS1 term&hellip;)</li>
+			<li>PAS number confirmation</li>
+		</ol>
+		</li>
+	</ol>
+	</li>
+	<li>At some point after that, the same patient is discharged.
+	<ol class="list-lower-alpha">
+		<li>A discharge slip is prepared which contains the clinicians notes and prescriptions.</li>
+	</ol>
+	</li>
+	<li>This discharge slip with prescriptions is digitally scanned by the pharmacy assistant to:
+	<ol class="list-lower-alpha">
+		<li>Link the prescription to the inpatient spell id (provide GS1 term&hellip;)</li>
+	</ol>
+	</li>
+	<li>The pharmacy assistant then generates the label (provide GS1 term&hellip;) for the prescriptions to take away
+	<ol class="list-lower-alpha">
+		<li>The PAS number is used to retrieve the inpatient spell id</li>
+		<li>The inpatient spell id is used to retrieve the current patient location</li>
+		<li>The inpatient spell id and patient location are then barcoded and printed on the pharmacy label which will be attached to the medicines bag(s).</li>
+	</ol>
+	</li>
+	<li>The pharmacy assistant then places the medicines bag(s) at designated collection points and scans the location code (provide GS1 term&hellip;) where the medicine bags are placed to link them to the inpatient spell id. The designated collection points might include:
+	<ol class="list-lower-alpha">
+		<li>Controlled drugs safe</li>
+		<li>Freezer</li>
+		<li>Pigeonhole for the department where the patient is currently located.</li>
+	</ol>
+	</li>
+	<li>The runner &ndash; who is presumably notified of the pending deliveries or may be making routine rounds across the facility &ndash; is equipped with a portable device which allows:
+	<ol class="list-lower-alpha">
+		<li>Look up of the friendly name of the department from (provide GS1 term&hellip;) gln on the barcode</li>
+		<li>Querying the collection points for all deliveries destined for a particular department</li>
+		<li>Keeping track of completed and pending collections</li>
+		<li>Potentially other yet-to-be-implemented features</li>
+	</ol>
+	</li>
+</ol>
+
+<h3>User Interface</h3>
+
+<p>This single page web-browser based application UI is built on an Angular framework v10.1.3</p>
+
+<p>It communicates with a single InterSystems IRIS for Health data platform instance via RESTful APIs, exposed by the IRIS instance.</p>
+
+<h3>Deployment</h3>
+
+<p>This demonstration is available to be run in Docker containers, either locally on Docker Desktop or on a remote host. eg. AWS EC2 Linux instance. Available configurations are:</p>
+
+<ol>
+	<li>Angular UI and IRIS in separate containers &ndash; <a href="https://github.com/isc-krakshith/iris-epcis-docker-application" target="_blank" rel="noopener noreferrer">GitHub repository</a>
+
+	<ol class="list-lower-alpha">
+		<li>On a single host</li>
+		<li>On separate hosts</li>
+	</ol>
+	</li>
+	<li>Angular UI hosted on the IRIS instance in a single container &ndash; <a href="https://github.com/isc-krakshith/irisdemo-demo-gs1-hosted" target="_blank" rel="noopener noreferrer">GitHub repository</a></li>
+</ol>
+
+<p>When the two components are deployed on separate hosts, please follow the repository instructions for frontend to correctly reach the IRIS instance.</p>
+
+<h3>Layout</h3>
+
+<p>There are 5 tabs available on the UI:</p>
+
+<ul>
+	<li>PRESENTATION</li>
+	<li>ADMISSIONS / DISCHARGE</li>
+	<li>PHARMACY</li>
+	<li>RUNNER APP</li>
+	<li>REST CALL LOGS</li>
+</ul>
+
+<h4>PRESENTATION</h4>
+
+<p>The UI starts at the Presentation page, which can be resized to best display the graphical content. Before the demonstration starts, click on the &lsquo;Open Production&rsquo; and &lsquo;Open Messages&rsquo; buttons to keep the respective pages on the IRIS for health Management Portal open and ready. This content is located in the Instructions area, whose visibility can be toggled by the &lsquo;Show Instructions&rsquo; / &lsquo;Hide Instructions&rsquo; button on the lower right of the page.</p>
+
+<h5>Actors and overlaid links</h5>
+
+<p>The various actors of interest in this demonstration are captioned in red font on the diagram:</p>
+
+<ul>
+	<li>ADMISSIONS (ADT) staff &ndash; shown near the top left</li>
+	<li>PHARMACY assistant &ndash; shown near the top centre</li>
+	<li>RUNNER &ndash; shown near the top centre-right</li>
+</ul>
+
+<p>Around the area where these actors are displayed, are overlaid links, which will launch the relevant tab on the UI for each of those actors.</p>
+
+<p>A similar overlaid link is centred on the IRIS interoperability icon and launches the Production page of the IRIS for Health Management Portal.</p>
+
+<h5>Resizing</h5>
+
+<p>Resizing the webpage, has marginal effect on the relative movement of the overlaid links, whose positions are dynamically recomputed. The best practice is to use the tab navigation links along the top of the application.</p>
+
+<h4>ADMISSIONS / DISCHARGE</h4>
+
+<p>This tab presents an ADT entry screen with the minimal fields required to give the audience a feel for the patient data which we will be referring to in the demonstration. The fields are prepopulated with default values. Changing the name of the patient on the UI will be reflected in the database and related interoperability production message trace. When a patient is admitted, a HL7v2 message with the patient data is generated. However, many of the fields contain default / synthetic values. After clicking &lsquo;Admit&rsquo; view the message trace in the Management Portal. Then return to PHARMACY tab on the web application.</p>
+
+<h4>PHARMACY</h4>
+
+<p>This tab contains a &lsquo;tablet-like&rsquo; UI and features some of the functionality which the pharmacy assistant will need to trigger the relevant events required for this demonstration.</p>
+
+<h5>Menu navigation:</h5>
+
+<ul>
+	<li>Link - &gt; Discharge Document
+	<ul class="list-circle">
+		<li>The pharmacy assistant uses this to link the discharge document with the inpatient spell id for that patient visit by clicking the &lsquo;Scan&rsquo; button which changes to &lsquo;Capture&rsquo; when a dummy discharge document is displayed.</li>
+		<li>Click the &lsquo;Capture&rsquo; button. The discharge document disappears from view.</li>
+		<li>View the message trace in Management Portal before continuing with the next step.</li>
+	</ul>
+	</li>
+	<li>Dispense - &gt; Generate Label:
+	<ul class="list-circle">
+		<li>Enter PAS number and date</li>
+		<li>Click &lsquo;Retrieve Inpatient Spell Id&rsquo; button</li>
+		<li>View the message trace in Management Portal before continuing with the next step.</li>
+		<li>Click &lsquo;Retrieve Patient Location Id&rsquo; button which is now seen enabled.</li>
+		<li>View the message trace in Management Portal before continuing with the next step.</li>
+		<li>Click &lsquo;Generate Pharmacy Label&rsquo; button to simulate the label being created with the above information incorporated within it. A dummy label is displayed on the UI.</li>
+	</ul>
+	</li>
+	<li>Dispense -&gt; Print
+	<ul class="list-circle">
+		<li>Explain that this menu would be used to print the pharmacy label which will be attached to the medicines bag(s)</li>
+	</ul>
+	</li>
+</ul>
+
+<h4>RUNNER APP</h4>
+
+<p>This tab contains a &lsquo;smartphone-like&rsquo; UI and features some of the functionality which a designated runner will need to trigger the relevant events required for this demonstration.</p>
+
+<h5>Menu navigation:</h5>
+
+<ul>
+	<li>Identify -&gt; Location:
+	<ul class="list-circle">
+		<li>The runner uses this to link to look up the friendly name for the Pharmacy Pigeonhole by clicking the &lsquo;Scan&rsquo; button which changes to &lsquo;Capture&rsquo; when the location barcode for Monkswell Ward Collection Slot is displayed.</li>
+		<li>View the message trace in Management Portal before continuing with the next step.</li>
+		<li>Explain that the Identify -&gt; Ward menu may be used to scan which ward the medicine bag(s) have been delivered to.</li>
+	</ul>
+	</li>
+	<li>Deliver -&gt; Retrieve Items
+	<ul class="list-circle">
+		<li>By providing the location name for the destination, the runner is able to view a list of the location from where the medications are to be collected. The checklist keeps track of the collections as the runner picks up medicines from each of the locations. When all the locations have been picked up from, the button becomes disabled.</li>
+		<li>View the message trace in Management Portal which shows a FHIR bundle with a host of information on the patient. As might be expected, only necessary information is displayed within the RUNNER APP.</li>
+	</ul>
+	</li>
+</ul>
+
+<h4>REST CALL LOGS</h4>
+
+<p>After each of the steps above, a trace is also sent to this part of the app to show that the REST calls return corresponding data to the front end, as is visible in the message traces. This can be used for both, to establish that the frontend is communicating correctly with the IRIS instance, as well as giving the audience confidence in the functionality being demonstrated.</p>

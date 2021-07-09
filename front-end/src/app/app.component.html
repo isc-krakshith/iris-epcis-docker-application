@@ -1,6 +1,14 @@
 <img src="assets/img/EPCISLogo8.jpg" width="250">
 <mat-tab-group dynamicHeight>
   <mat-tab>
+    <div class="presentation-screen mat-elevation-z4">
+    <ng-template mat-tab-label>
+      PRESENTATION
+    </ng-template>
+    <app-presentation></app-presentation>
+    </div>
+  </mat-tab>
+  <mat-tab>
     <div class="adt-screen mat-elevation-z4">
     <ng-template mat-tab-label>
       ADMISSION / DISCHARGE

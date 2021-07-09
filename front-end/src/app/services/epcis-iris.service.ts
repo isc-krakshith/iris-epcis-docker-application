@@ -29,6 +29,7 @@ export class EPCISIRISService {
       return of(result as T);
     };
   }
+
   getBackendIP():string {
     //when the front end is run in an angular container
     //environment.apiURL will be an empty string IF backend IP address
