@@ -72,3 +72,8 @@
   code, pre, xmp, kbd {
     font-family: 'Roboto Mono', Courier New, Courier, monospace;
   }
+
+  .version-container {
+    text-align:right;
+    font-size: 10pt;
+}

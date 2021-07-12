@@ -71,12 +71,16 @@ ComingSoonComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefi
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "environment", function() { return environment; });
+/* harmony import */ var _package_json__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../package.json */ "kiQV");
+var _package_json__WEBPACK_IMPORTED_MODULE_0___namespace = /*#__PURE__*/__webpack_require__.t(/*! ../../package.json */ "kiQV", 1);
+
 // This file can be replaced during build by using the `fileReplacements` array.
 // `ng build --prod` replaces `environment.ts` with `environment.prod.ts`.
 // The list of file replacements can be found in `angular.json`.
 const environment = {
     production: false,
-    apiURL: 'localhost'
+    apiURL: 'localhost',
+    version: _package_json__WEBPACK_IMPORTED_MODULE_0__["version"]
 };
 /*
  * For easier debugging in development mode, you can import the following file
@@ -421,12 +425,13 @@ GenLabelComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefine
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AppComponent", function() { return AppComponent; });
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "fXoL");
-/* harmony import */ var _angular_material_tabs__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/material/tabs */ "wZkO");
-/* harmony import */ var _presentation_presentation_component__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./presentation/presentation.component */ "gVBG");
-/* harmony import */ var _admission_form_admission_form_component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./admission-form/admission-form.component */ "YhEJ");
-/* harmony import */ var _pharmacy_ui_pharmacy_ui_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./pharmacy-ui/pharmacy-ui.component */ "t9WN");
-/* harmony import */ var _runner_app_runner_app_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./runner-app/runner-app.component */ "XD1p");
-/* harmony import */ var _messages_messages_component__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./messages/messages.component */ "DruN");
+/* harmony import */ var src_environments_environment__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! src/environments/environment */ "AytR");
+/* harmony import */ var _angular_material_tabs__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/material/tabs */ "wZkO");
+/* harmony import */ var _presentation_presentation_component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./presentation/presentation.component */ "gVBG");
+/* harmony import */ var _admission_form_admission_form_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./admission-form/admission-form.component */ "YhEJ");
+/* harmony import */ var _pharmacy_ui_pharmacy_ui_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./pharmacy-ui/pharmacy-ui.component */ "t9WN");
+/* harmony import */ var _runner_app_runner_app_component__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./runner-app/runner-app.component */ "XD1p");
+/* harmony import */ var _messages_messages_component__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./messages/messages.component */ "DruN");
 
 
 
@@ -435,64 +440,80 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-function AppComponent_ng_template_4_Template(rf, ctx) { if (rf & 1) {
+
+function AppComponent_ng_template_10_Template(rf, ctx) { if (rf & 1) {
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](0, " PRESENTATION ");
 } }
-function AppComponent_ng_template_8_Template(rf, ctx) { if (rf & 1) {
+function AppComponent_ng_template_14_Template(rf, ctx) { if (rf & 1) {
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](0, " ADMISSION / DISCHARGE ");
 } }
-function AppComponent_ng_template_12_Template(rf, ctx) { if (rf & 1) {
+function AppComponent_ng_template_18_Template(rf, ctx) { if (rf & 1) {
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](0, " PHARMACY ");
 } }
-function AppComponent_ng_template_16_Template(rf, ctx) { if (rf & 1) {
+function AppComponent_ng_template_22_Template(rf, ctx) { if (rf & 1) {
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](0, " RUNNER APP ");
 } }
-function AppComponent_ng_template_20_Template(rf, ctx) { if (rf & 1) {
+function AppComponent_ng_template_26_Template(rf, ctx) { if (rf & 1) {
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](0, " REST CALL LOGS ");
 } }
 class AppComponent {
     constructor() {
         this.title = 'epcis-app';
+        this.version = src_environments_environment__WEBPACK_IMPORTED_MODULE_1__["environment"].version;
     }
 }
 AppComponent.ɵfac = function AppComponent_Factory(t) { return new (t || AppComponent)(); };
-AppComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({ type: AppComponent, selectors: [["app-root"]], decls: 23, vars: 0, consts: [["src", "assets/img/EPCISLogo8.jpg", "width", "250"], ["dynamicHeight", ""], [1, "presentation-screen", "mat-elevation-z4"], ["mat-tab-label", ""], [1, "adt-screen", "mat-elevation-z4"], [1, "pharmacy-screen", "mat-elevation-z4"], [1, "runner-screen", "mat-elevation-z4"], [1, "mat-elevation-z4"], [1, "main-content"]], template: function AppComponent_Template(rf, ctx) { if (rf & 1) {
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](0, "img", 0);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1, "mat-tab-group", 1);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](2, "mat-tab");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](3, "div", 2);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](4, AppComponent_ng_template_4_Template, 1, 0, "ng-template", 3);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](5, "app-presentation");
+AppComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({ type: AppComponent, selectors: [["app-root"]], decls: 29, vars: 1, consts: [["width", "98%"], ["src", "assets/img/EPCISLogo8.jpg", "width", "250px"], [1, "version-container"], ["dynamicHeight", ""], [1, "presentation-screen", "mat-elevation-z4"], ["mat-tab-label", ""], [1, "adt-screen", "mat-elevation-z4"], [1, "pharmacy-screen", "mat-elevation-z4"], [1, "runner-screen", "mat-elevation-z4"], [1, "mat-elevation-z4"], [1, "main-content"]], template: function AppComponent_Template(rf, ctx) { if (rf & 1) {
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "table", 0);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1, "tr");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](2, "td");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](3, "img", 1);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](4, "td", 2);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](5, "code");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](6);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](6, "mat-tab");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](7, "div", 4);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](8, AppComponent_ng_template_8_Template, 1, 0, "ng-template", 3);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](9, "app-admission-form");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](10, "mat-tab");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](11, "div", 5);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](12, AppComponent_ng_template_12_Template, 1, 0, "ng-template", 3);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](13, "app-pharmacy-ui");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](7, "mat-tab-group", 3);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](8, "mat-tab");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](9, "div", 4);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](10, AppComponent_ng_template_10_Template, 1, 0, "ng-template", 5);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](11, "app-presentation");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](14, "mat-tab");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](15, "div", 6);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](16, AppComponent_ng_template_16_Template, 1, 0, "ng-template", 3);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](17, "app-runner-app");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](12, "mat-tab");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](13, "div", 6);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](14, AppComponent_ng_template_14_Template, 1, 0, "ng-template", 5);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](15, "app-admission-form");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](18, "mat-tab");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](19, "div", 7);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](20, AppComponent_ng_template_20_Template, 1, 0, "ng-template", 3);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](16, "mat-tab");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](17, "div", 7);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](18, AppComponent_ng_template_18_Template, 1, 0, "ng-template", 5);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](19, "app-pharmacy-ui");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](20, "mat-tab");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](21, "div", 8);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](22, "app-messages");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](22, AppComponent_ng_template_22_Template, 1, 0, "ng-template", 5);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](23, "app-runner-app");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](24, "mat-tab");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](25, "div", 9);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](26, AppComponent_ng_template_26_Template, 1, 0, "ng-template", 5);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](27, "div", 10);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](28, "app-messages");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-    } }, directives: [_angular_material_tabs__WEBPACK_IMPORTED_MODULE_1__["MatTabGroup"], _angular_material_tabs__WEBPACK_IMPORTED_MODULE_1__["MatTab"], _angular_material_tabs__WEBPACK_IMPORTED_MODULE_1__["MatTabLabel"], _presentation_presentation_component__WEBPACK_IMPORTED_MODULE_2__["PresentationComponent"], _admission_form_admission_form_component__WEBPACK_IMPORTED_MODULE_3__["AdmissionFormComponent"], _pharmacy_ui_pharmacy_ui_component__WEBPACK_IMPORTED_MODULE_4__["PharmacyUiComponent"], _runner_app_runner_app_component__WEBPACK_IMPORTED_MODULE_5__["RunnerAppComponent"], _messages_messages_component__WEBPACK_IMPORTED_MODULE_6__["MessagesComponent"]], styles: ["#screen[_ngcontent-%COMP%] {\n    height: 821px;\n    width: 375px;\n    border: 1px solid black;\n    margin: auto;\n  }\n  \n  #screen-top[_ngcontent-%COMP%] {\n    height: 80%;\n    background: linear-gradient(to bottom, #ccccff 0%, #666699 100%);\n    color: rgba(0, 0, 0, 0.54);\n    display: flex;\n    align-items: center;\n    justify-content: center;\n    font-family: Helvetica;\n    font-weight: bolder;\n    font-size: 30px;\n  }\n  \n  #screen-footer[_ngcontent-%COMP%] {\n    height: 20%;\n    background: linear-gradient(to bottom, #666699 0%, #000066 100%);\n    color: rgba(0, 0, 0, 0.54);\n    font-family: Helvetica;\n    font-weight: bold;\n    box-sizing: border-box;\n    padding: 24px;\n    text-align: center;\n  }\n  \n  .tab-icon[_ngcontent-%COMP%] {\n    margin-right: 8px;\n  }\n  \n  .header-icon[_ngcontent-%COMP%]{\n    font-size: 70px;\n    color:#3F51B5;\n    align-content: right;\n  }\n  \n  .presentation-screen[_ngcontent-%COMP%], .adt-screen[_ngcontent-%COMP%], .runner-screen[_ngcontent-%COMP%], .pharmacy-screen[_ngcontent-%COMP%] {\n    display: flex;\n    align-items: center;\n    justify-content:center;\n    margin: 16px;\n    padding: 16px;\n    border-radius: 20px;\n  }\n  \n  .adt-screen[_ngcontent-%COMP%] {\n    height: 300px;\n    width: 450px;\n  }\n  \n  .pharmacy-screen[_ngcontent-%COMP%] {\n    height: 910px;\n    width: 630px;\n    border-radius: 36px;\n  }\n  \n  .runner-screen[_ngcontent-%COMP%] {\n    height: 750px;\n    width: 380px;\n    border-radius: 36px;\n  }\n  \n  .large-box[_ngcontent-%COMP%] {\n    height: 400px;\n    width: 400px;\n  }\n  \n  code[_ngcontent-%COMP%], pre[_ngcontent-%COMP%], xmp[_ngcontent-%COMP%], kbd[_ngcontent-%COMP%] {\n    font-family: 'Roboto Mono', Courier New, Courier, monospace;\n  }\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvYXBwLmNvbXBvbmVudC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7SUFDSSxhQUFhO0lBQ2IsWUFBWTtJQUNaLHVCQUF1QjtJQUN2QixZQUFZO0VBQ2Q7O0VBRUE7SUFDRSxXQUFXO0lBQ1gsZ0VBQWdFO0lBQ2hFLDBCQUEwQjtJQUMxQixhQUFhO0lBQ2IsbUJBQW1CO0lBQ25CLHVCQUF1QjtJQUN2QixzQkFBc0I7SUFDdEIsbUJBQW1CO0lBQ25CLGVBQWU7RUFDakI7O0VBRUE7SUFDRSxXQUFXO0lBQ1gsZ0VBQWdFO0lBQ2hFLDBCQUEwQjtJQUMxQixzQkFBc0I7SUFDdEIsaUJBQWlCO0lBQ2pCLHNCQUFzQjtJQUN0QixhQUFhO0lBQ2Isa0JBQWtCO0VBQ3BCOztFQUVBO0lBQ0UsaUJBQWlCO0VBQ25COztFQUVBO0lBQ0UsZUFBZTtJQUNmLGFBQWE7SUFDYixvQkFBb0I7RUFDdEI7O0VBRUE7SUFDRSxhQUFhO0lBQ2IsbUJBQW1CO0lBQ25CLHNCQUFzQjtJQUN0QixZQUFZO0lBQ1osYUFBYTtJQUNiLG1CQUFtQjtFQUNyQjs7RUFFQTtJQUNFLGFBQWE7SUFDYixZQUFZO0VBQ2Q7O0VBRUE7SUFDRSxhQUFhO0lBQ2IsWUFBWTtJQUNaLG1CQUFtQjtFQUNyQjs7RUFFQTtJQUNFLGFBQWE7SUFDYixZQUFZO0lBQ1osbUJBQW1CO0VBQ3JCOztFQUVBO0lBQ0UsYUFBYTtJQUNiLFlBQVk7RUFDZDs7RUFFQTtJQUNFLDJEQUEyRDtFQUM3RCIsImZpbGUiOiJzcmMvYXBwL2FwcC5jb21wb25lbnQuY3NzIiwic291cmNlc0NvbnRlbnQiOlsiI3NjcmVlbiB7XG4gICAgaGVpZ2h0OiA4MjFweDtcbiAgICB3aWR0aDogMzc1cHg7XG4gICAgYm9yZGVyOiAxcHggc29saWQgYmxhY2s7XG4gICAgbWFyZ2luOiBhdXRvO1xuICB9XG4gIFxuICAjc2NyZWVuLXRvcCB7XG4gICAgaGVpZ2h0OiA4MCU7XG4gICAgYmFja2dyb3VuZDogbGluZWFyLWdyYWRpZW50KHRvIGJvdHRvbSwgI2NjY2NmZiAwJSwgIzY2NjY5OSAxMDAlKTtcbiAgICBjb2xvcjogcmdiYSgwLCAwLCAwLCAwLjU0KTtcbiAgICBkaXNwbGF5OiBmbGV4O1xuICAgIGFsaWduLWl0ZW1zOiBjZW50ZXI7XG4gICAganVzdGlmeS1jb250ZW50OiBjZW50ZXI7XG4gICAgZm9udC1mYW1pbHk6IEhlbHZldGljYTtcbiAgICBmb250LXdlaWdodDogYm9sZGVyO1xuICAgIGZvbnQtc2l6ZTogMzBweDtcbiAgfVxuICBcbiAgI3NjcmVlbi1mb290ZXIge1xuICAgIGhlaWdodDogMjAlO1xuICAgIGJhY2tncm91bmQ6IGxpbmVhci1ncmFkaWVudCh0byBib3R0b20sICM2NjY2OTkgMCUsICMwMDAwNjYgMTAwJSk7XG4gICAgY29sb3I6IHJnYmEoMCwgMCwgMCwgMC41NCk7XG4gICAgZm9udC1mYW1pbHk6IEhlbHZldGljYTtcbiAgICBmb250LXdlaWdodDogYm9sZDtcbiAgICBib3gtc2l6aW5nOiBib3JkZXItYm94O1xuICAgIHBhZGRpbmc6IDI0cHg7XG4gICAgdGV4dC1hbGlnbjogY2VudGVyO1xuICB9XG5cbiAgLnRhYi1pY29uIHtcbiAgICBtYXJnaW4tcmlnaHQ6IDhweDtcbiAgfVxuXG4gIC5oZWFkZXItaWNvbntcbiAgICBmb250LXNpemU6IDcwcHg7XG4gICAgY29sb3I6IzNGNTFCNTtcbiAgICBhbGlnbi1jb250ZW50OiByaWdodDtcbiAgfVxuXG4gIC5wcmVzZW50YXRpb24tc2NyZWVuLCAuYWR0LXNjcmVlbiwgLnJ1bm5lci1zY3JlZW4sIC5waGFybWFjeS1zY3JlZW4ge1xuICAgIGRpc3BsYXk6IGZsZXg7XG4gICAgYWxpZ24taXRlbXM6IGNlbnRlcjtcbiAgICBqdXN0aWZ5LWNvbnRlbnQ6Y2VudGVyO1xuICAgIG1hcmdpbjogMTZweDtcbiAgICBwYWRkaW5nOiAxNnB4O1xuICAgIGJvcmRlci1yYWRpdXM6IDIwcHg7XG4gIH1cbiAgXG4gIC5hZHQtc2NyZWVuIHtcbiAgICBoZWlnaHQ6IDMwMHB4O1xuICAgIHdpZHRoOiA0NTBweDtcbiAgfVxuICBcbiAgLnBoYXJtYWN5LXNjcmVlbiB7XG4gICAgaGVpZ2h0OiA5MTBweDtcbiAgICB3aWR0aDogNjMwcHg7XG4gICAgYm9yZGVyLXJhZGl1czogMzZweDtcbiAgfVxuXG4gIC5ydW5uZXItc2NyZWVuIHtcbiAgICBoZWlnaHQ6IDc1MHB4O1xuICAgIHdpZHRoOiAzODBweDtcbiAgICBib3JkZXItcmFkaXVzOiAzNnB4O1xuICB9XG5cbiAgLmxhcmdlLWJveCB7XG4gICAgaGVpZ2h0OiA0MDBweDtcbiAgICB3aWR0aDogNDAwcHg7XG4gIH1cblxuICBjb2RlLCBwcmUsIHhtcCwga2JkIHtcbiAgICBmb250LWZhbWlseTogJ1JvYm90byBNb25vJywgQ291cmllciBOZXcsIENvdXJpZXIsIG1vbm9zcGFjZTtcbiAgfSJdfQ== */"] });
+    } if (rf & 2) {
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](6);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate1"]("App Version:", ctx.version, "");
+    } }, directives: [_angular_material_tabs__WEBPACK_IMPORTED_MODULE_2__["MatTabGroup"], _angular_material_tabs__WEBPACK_IMPORTED_MODULE_2__["MatTab"], _angular_material_tabs__WEBPACK_IMPORTED_MODULE_2__["MatTabLabel"], _presentation_presentation_component__WEBPACK_IMPORTED_MODULE_3__["PresentationComponent"], _admission_form_admission_form_component__WEBPACK_IMPORTED_MODULE_4__["AdmissionFormComponent"], _pharmacy_ui_pharmacy_ui_component__WEBPACK_IMPORTED_MODULE_5__["PharmacyUiComponent"], _runner_app_runner_app_component__WEBPACK_IMPORTED_MODULE_6__["RunnerAppComponent"], _messages_messages_component__WEBPACK_IMPORTED_MODULE_7__["MessagesComponent"]], styles: ["#screen[_ngcontent-%COMP%] {\n    height: 821px;\n    width: 375px;\n    border: 1px solid black;\n    margin: auto;\n  }\n  \n  #screen-top[_ngcontent-%COMP%] {\n    height: 80%;\n    background: linear-gradient(to bottom, #ccccff 0%, #666699 100%);\n    color: rgba(0, 0, 0, 0.54);\n    display: flex;\n    align-items: center;\n    justify-content: center;\n    font-family: Helvetica;\n    font-weight: bolder;\n    font-size: 30px;\n  }\n  \n  #screen-footer[_ngcontent-%COMP%] {\n    height: 20%;\n    background: linear-gradient(to bottom, #666699 0%, #000066 100%);\n    color: rgba(0, 0, 0, 0.54);\n    font-family: Helvetica;\n    font-weight: bold;\n    box-sizing: border-box;\n    padding: 24px;\n    text-align: center;\n  }\n  \n  .tab-icon[_ngcontent-%COMP%] {\n    margin-right: 8px;\n  }\n  \n  .header-icon[_ngcontent-%COMP%]{\n    font-size: 70px;\n    color:#3F51B5;\n    align-content: right;\n  }\n  \n  .presentation-screen[_ngcontent-%COMP%], .adt-screen[_ngcontent-%COMP%], .runner-screen[_ngcontent-%COMP%], .pharmacy-screen[_ngcontent-%COMP%] {\n    display: flex;\n    align-items: center;\n    justify-content:center;\n    margin: 16px;\n    padding: 16px;\n    border-radius: 20px;\n  }\n  \n  .adt-screen[_ngcontent-%COMP%] {\n    height: 300px;\n    width: 450px;\n  }\n  \n  .pharmacy-screen[_ngcontent-%COMP%] {\n    height: 910px;\n    width: 630px;\n    border-radius: 36px;\n  }\n  \n  .runner-screen[_ngcontent-%COMP%] {\n    height: 750px;\n    width: 380px;\n    border-radius: 36px;\n  }\n  \n  .large-box[_ngcontent-%COMP%] {\n    height: 400px;\n    width: 400px;\n  }\n  \n  code[_ngcontent-%COMP%], pre[_ngcontent-%COMP%], xmp[_ngcontent-%COMP%], kbd[_ngcontent-%COMP%] {\n    font-family: 'Roboto Mono', Courier New, Courier, monospace;\n  }\n  \n  .version-container[_ngcontent-%COMP%] {\n    text-align:right;\n    font-size: 10pt;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvYXBwLmNvbXBvbmVudC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7SUFDSSxhQUFhO0lBQ2IsWUFBWTtJQUNaLHVCQUF1QjtJQUN2QixZQUFZO0VBQ2Q7O0VBRUE7SUFDRSxXQUFXO0lBQ1gsZ0VBQWdFO0lBQ2hFLDBCQUEwQjtJQUMxQixhQUFhO0lBQ2IsbUJBQW1CO0lBQ25CLHVCQUF1QjtJQUN2QixzQkFBc0I7SUFDdEIsbUJBQW1CO0lBQ25CLGVBQWU7RUFDakI7O0VBRUE7SUFDRSxXQUFXO0lBQ1gsZ0VBQWdFO0lBQ2hFLDBCQUEwQjtJQUMxQixzQkFBc0I7SUFDdEIsaUJBQWlCO0lBQ2pCLHNCQUFzQjtJQUN0QixhQUFhO0lBQ2Isa0JBQWtCO0VBQ3BCOztFQUVBO0lBQ0UsaUJBQWlCO0VBQ25COztFQUVBO0lBQ0UsZUFBZTtJQUNmLGFBQWE7SUFDYixvQkFBb0I7RUFDdEI7O0VBRUE7SUFDRSxhQUFhO0lBQ2IsbUJBQW1CO0lBQ25CLHNCQUFzQjtJQUN0QixZQUFZO0lBQ1osYUFBYTtJQUNiLG1CQUFtQjtFQUNyQjs7RUFFQTtJQUNFLGFBQWE7SUFDYixZQUFZO0VBQ2Q7O0VBRUE7SUFDRSxhQUFhO0lBQ2IsWUFBWTtJQUNaLG1CQUFtQjtFQUNyQjs7RUFFQTtJQUNFLGFBQWE7SUFDYixZQUFZO0lBQ1osbUJBQW1CO0VBQ3JCOztFQUVBO0lBQ0UsYUFBYTtJQUNiLFlBQVk7RUFDZDs7RUFFQTtJQUNFLDJEQUEyRDtFQUM3RDs7RUFFQTtJQUNFLGdCQUFnQjtJQUNoQixlQUFlO0FBQ25CIiwiZmlsZSI6InNyYy9hcHAvYXBwLmNvbXBvbmVudC5jc3MiLCJzb3VyY2VzQ29udGVudCI6WyIjc2NyZWVuIHtcbiAgICBoZWlnaHQ6IDgyMXB4O1xuICAgIHdpZHRoOiAzNzVweDtcbiAgICBib3JkZXI6IDFweCBzb2xpZCBibGFjaztcbiAgICBtYXJnaW46IGF1dG87XG4gIH1cbiAgXG4gICNzY3JlZW4tdG9wIHtcbiAgICBoZWlnaHQ6IDgwJTtcbiAgICBiYWNrZ3JvdW5kOiBsaW5lYXItZ3JhZGllbnQodG8gYm90dG9tLCAjY2NjY2ZmIDAlLCAjNjY2Njk5IDEwMCUpO1xuICAgIGNvbG9yOiByZ2JhKDAsIDAsIDAsIDAuNTQpO1xuICAgIGRpc3BsYXk6IGZsZXg7XG4gICAgYWxpZ24taXRlbXM6IGNlbnRlcjtcbiAgICBqdXN0aWZ5LWNvbnRlbnQ6IGNlbnRlcjtcbiAgICBmb250LWZhbWlseTogSGVsdmV0aWNhO1xuICAgIGZvbnQtd2VpZ2h0OiBib2xkZXI7XG4gICAgZm9udC1zaXplOiAzMHB4O1xuICB9XG4gIFxuICAjc2NyZWVuLWZvb3RlciB7XG4gICAgaGVpZ2h0OiAyMCU7XG4gICAgYmFja2dyb3VuZDogbGluZWFyLWdyYWRpZW50KHRvIGJvdHRvbSwgIzY2NjY5OSAwJSwgIzAwMDA2NiAxMDAlKTtcbiAgICBjb2xvcjogcmdiYSgwLCAwLCAwLCAwLjU0KTtcbiAgICBmb250LWZhbWlseTogSGVsdmV0aWNhO1xuICAgIGZvbnQtd2VpZ2h0OiBib2xkO1xuICAgIGJveC1zaXppbmc6IGJvcmRlci1ib3g7XG4gICAgcGFkZGluZzogMjRweDtcbiAgICB0ZXh0LWFsaWduOiBjZW50ZXI7XG4gIH1cblxuICAudGFiLWljb24ge1xuICAgIG1hcmdpbi1yaWdodDogOHB4O1xuICB9XG5cbiAgLmhlYWRlci1pY29ue1xuICAgIGZvbnQtc2l6ZTogNzBweDtcbiAgICBjb2xvcjojM0Y1MUI1O1xuICAgIGFsaWduLWNvbnRlbnQ6IHJpZ2h0O1xuICB9XG5cbiAgLnByZXNlbnRhdGlvbi1zY3JlZW4sIC5hZHQtc2NyZWVuLCAucnVubmVyLXNjcmVlbiwgLnBoYXJtYWN5LXNjcmVlbiB7XG4gICAgZGlzcGxheTogZmxleDtcbiAgICBhbGlnbi1pdGVtczogY2VudGVyO1xuICAgIGp1c3RpZnktY29udGVudDpjZW50ZXI7XG4gICAgbWFyZ2luOiAxNnB4O1xuICAgIHBhZGRpbmc6IDE2cHg7XG4gICAgYm9yZGVyLXJhZGl1czogMjBweDtcbiAgfVxuICBcbiAgLmFkdC1zY3JlZW4ge1xuICAgIGhlaWdodDogMzAwcHg7XG4gICAgd2lkdGg6IDQ1MHB4O1xuICB9XG4gIFxuICAucGhhcm1hY3ktc2NyZWVuIHtcbiAgICBoZWlnaHQ6IDkxMHB4O1xuICAgIHdpZHRoOiA2MzBweDtcbiAgICBib3JkZXItcmFkaXVzOiAzNnB4O1xuICB9XG5cbiAgLnJ1bm5lci1zY3JlZW4ge1xuICAgIGhlaWdodDogNzUwcHg7XG4gICAgd2lkdGg6IDM4MHB4O1xuICAgIGJvcmRlci1yYWRpdXM6IDM2cHg7XG4gIH1cblxuICAubGFyZ2UtYm94IHtcbiAgICBoZWlnaHQ6IDQwMHB4O1xuICAgIHdpZHRoOiA0MDBweDtcbiAgfVxuXG4gIGNvZGUsIHByZSwgeG1wLCBrYmQge1xuICAgIGZvbnQtZmFtaWx5OiAnUm9ib3RvIE1vbm8nLCBDb3VyaWVyIE5ldywgQ291cmllciwgbW9ub3NwYWNlO1xuICB9XG5cbiAgLnZlcnNpb24tY29udGFpbmVyIHtcbiAgICB0ZXh0LWFsaWduOnJpZ2h0O1xuICAgIGZvbnQtc2l6ZTogMTBwdDtcbn0iXX0= */"] });
 /*@__PURE__*/ (function () { _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵsetClassMetadata"](AppComponent, [{
         type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"],
         args: [{
@@ -524,7 +545,7 @@ class InstructionsComponent {
     }
 }
 InstructionsComponent.ɵfac = function InstructionsComponent_Factory(t) { return new (t || InstructionsComponent)(); };
-InstructionsComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({ type: InstructionsComponent, selectors: [["app-instructions"]], decls: 206, vars: 0, consts: [[1, "list-lower-alpha"], [1, "list-lower-roman"], ["href", "https://github.com/isc-krakshith/iris-epcis-docker-application", "target", "_blank", "rel", "noopener noreferrer"], ["href", "https://github.com/isc-krakshith/irisdemo-demo-gs1-hosted", "target", "_blank", "rel", "noopener noreferrer"], [1, "list-circle"]], template: function InstructionsComponent_Template(rf, ctx) { if (rf & 1) {
+InstructionsComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({ type: InstructionsComponent, selectors: [["app-instructions"]], decls: 217, vars: 0, consts: [[1, "list-lower-alpha"], [1, "list-lower-roman"], [1, "list-circle"], ["href", "https://github.com/isc-krakshith/iris-epcis-docker-application", "target", "_blank", "rel", "noopener noreferrer"], ["href", "https://github.com/isc-krakshith/irisdemo-demo-gs1-hosted", "target", "_blank", "rel", "noopener noreferrer"]], template: function InstructionsComponent_Template(rf, ctx) { if (rf & 1) {
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "h2");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](1, "Introduction");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
@@ -568,283 +589,300 @@ InstructionsComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵde
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](28, "This generates a HL7v2 message which triggers: ");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](29, "ol", 1);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](30, "li");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](31, "Inpatient spell id generation (provide GS1 term\u2026)");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](31, "Inpatient spell id generation");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](32, "li");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](33, "Inpatient ward-stay id generation (provide GS1 term\u2026)");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](33, "Inpatient ward-stay id generation");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](34, "li");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](35, "PAS number confirmation");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](36, "li");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](37, "At some point after that, the same patient is discharged. ");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](38, "ol", 0);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](37, "Linked to them are, EPCIS standard elements such as: ");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](38, "ul", 2);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](39, "li");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](40, "A discharge slip is prepared which contains the clinicians notes and prescriptions.");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](40, "GSRN (Global Service Relationship Number),");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](41, "li");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](42, "This discharge slip with prescriptions is digitally scanned by the pharmacy assistant to: ");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](43, "ol", 0);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](44, "li");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](45, "Link the prescription to the inpatient spell id (provide GS1 term\u2026)");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](42, "SGLN (Specific Geographic Location Name),");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](43, "li");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](44, "URN (Uniform Resource Name)");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](45, "li");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](46, "corresponding business step defined for a healthcare application, \u2018accepting\u2019 in this case.");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](46, "li");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](47, "The pharmacy assistant then generates the label (provide GS1 term\u2026) for the prescriptions to take away ");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](48, "ol", 0);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](49, "li");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](50, "The PAS number is used to retrieve the inpatient spell id");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](51, "li");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](52, "The inpatient spell id is used to retrieve the current patient location");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](53, "li");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](54, "The inpatient spell id and patient location are then barcoded and printed on the pharmacy label which will be attached to the medicines bag(s).");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](47, "li");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](48, "At some point after that, the same patient is discharged. ");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](49, "ol", 0);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](50, "li");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](51, "A discharge slip is prepared which contains the clinicians notes and prescriptions.");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](52, "li");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](53, "This discharge slip with prescriptions is digitally scanned by the pharmacy assistant to: ");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](54, "ol", 0);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](55, "li");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](56, "The pharmacy assistant then places the medicines bag(s) at designated collection points and scans the location code (provide GS1 term\u2026) where the medicine bags are placed to link them to the inpatient spell id. The designated collection points might include: ");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](57, "ol", 0);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](58, "li");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](59, "Controlled drugs safe");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](56, "Link the prescription to the inpatient spell id");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](57, "li");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](58, "The pharmacy assistant then generates the label with a EPCIS compliant GDTI (Global Document Type Identifier) and SSCC (Serial Shipping Container Code) for the prescriptions to take away ");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](59, "ol", 0);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](60, "li");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](61, "Freezer");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](61, "The PAS number is used to retrieve the inpatient spell id");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](62, "li");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](63, "Pigeonhole for the department where the patient is currently located.");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](63, "The inpatient spell id is used to retrieve the current patient location");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](64, "li");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](65, "The runner \u2013 who is presumably notified of the pending deliveries or may be making routine rounds across the facility \u2013 is equipped with a portable device which allows: ");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](66, "ol", 0);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](67, "li");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](68, "Look up of the friendly name of the department from (provide GS1 term\u2026) gln on the barcode");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](65, "The inpatient spell id and patient location are then barcoded and printed on the pharmacy label which will be attached to the medicines bag(s).");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](66, "li");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](67, "The pharmacy assistant then places the medicines bag(s) at designated collection points and scans the EPCIS Compliant GLN / SGLN (Global Location Number) location code where the medicine bags are placed to link them to the inpatient spell id. The designated collection points might include: ");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](68, "ol", 0);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](69, "li");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](70, "Querying the collection points for all deliveries destined for a particular department");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](70, "Controlled drugs safe");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](71, "li");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](72, "Keeping track of completed and pending collections");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](72, "Freezer");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](73, "li");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](74, "Potentially other yet-to-be-implemented features");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](74, "Pigeonhole for the department where the patient is currently located.");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](75, "li");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](76, "The runner \u2013 who is presumably notified of the pending deliveries or may be making routine rounds across the facility \u2013 is equipped with a portable device which allows: ");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](77, "ol", 0);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](78, "li");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](79, "Look up of the friendly name of the department from GLN on the barcode");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](80, "li");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](81, "Querying the collection points for all deliveries destined for a particular department");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](82, "li");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](83, "Keeping track of completed and pending collections");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](84, "li");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](85, "Potentially other yet-to-be-implemented features");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](75, "h3");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](76, "User Interface");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](86, "h3");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](87, "User Interface");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](77, "p");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](78, "This single page web-browser based application UI is built on an Angular framework v10.1.3");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](88, "p");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](89, "This single page web-browser based application UI is built on an Angular framework v10.1.3");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](79, "p");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](80, "It communicates with a single InterSystems IRIS for Health data platform instance via RESTful APIs, exposed by the IRIS instance.");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](90, "p");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](91, "It communicates with a single InterSystems IRIS for Health instance via RESTful APIs, exposed by the IRIS instance.");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](81, "h3");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](82, "Deployment");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](92, "h3");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](93, "Deployment");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](83, "p");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](84, "This demonstration is available to be run in Docker containers, either locally on Docker Desktop or on a remote host. eg. AWS EC2 Linux instance. Available configurations are:");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](94, "p");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](95, "This demonstration is available to be run in Docker containers, either locally on Docker Desktop or on a remote host. eg. AWS EC2 Linux instance. Available configurations are:");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](85, "ol");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](86, "li");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](87, "Angular UI and IRIS in separate containers \u2013 ");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](88, "a", 2);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](89, "GitHub repository");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](96, "ol");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](97, "li");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](98, "Angular UI and IRIS in separate containers \u2013 ");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](99, "a", 3);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](100, "GitHub repository");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](90, "ol", 0);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](91, "li");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](92, "On a single host");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](101, "ol", 0);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](102, "li");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](103, "On a single host");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](93, "li");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](94, "On separate hosts");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](95, "li");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](96, "Angular UI hosted on the IRIS instance in a single container \u2013 ");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](97, "a", 3);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](98, "GitHub repository");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](104, "li");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](105, "On separate hosts");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](99, "p");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](100, "When the two components are deployed on separate hosts, please follow the repository instructions for frontend to correctly reach the IRIS instance.");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](101, "h3");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](102, "Layout");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](103, "p");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](104, "There are 5 tabs available on the UI:");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](105, "ul");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](106, "li");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](107, "PRESENTATION");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](108, "li");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](109, "ADMISSIONS / DISCHARGE");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](110, "li");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](111, "PHARMACY");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](112, "li");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](113, "RUNNER APP");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](114, "li");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](115, "REST CALL LOGS");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](107, "Angular UI hosted on the IRIS instance in a single container \u2013 ");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](108, "a", 4);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](109, "GitHub repository");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](116, "h4");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](117, "PRESENTATION");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](118, "p");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](119, "The UI starts at the Presentation page, which can be resized to best display the graphical content. Before the demonstration starts, click on the \u2018Open Production\u2019 and \u2018Open Messages\u2019 buttons to keep the respective pages on the IRIS for health Management Portal open and ready. This content is located in the Instructions area, whose visibility can be toggled by the \u2018Show Instructions\u2019 / \u2018Hide Instructions\u2019 button on the lower right of the page.");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](110, "p");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](111, "When the two components are deployed on separate hosts, please follow the repository instructions for frontend to correctly reach the IRIS instance.");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](120, "h5");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](121, "Actors and overlaid links");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](112, "h3");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](113, "Layout");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](122, "p");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](123, "The various actors of interest in this demonstration are captioned in red font on the diagram:");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](114, "p");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](115, "There are 5 tabs available on the UI:");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](124, "ul");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](116, "ul");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](117, "li");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](118, "PRESENTATION");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](119, "li");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](120, "ADMISSIONS / DISCHARGE");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](121, "li");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](122, "PHARMACY");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](123, "li");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](124, "RUNNER APP");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](125, "li");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](126, "ADMISSIONS (ADT) staff \u2013 shown near the top left");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](127, "li");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](128, "PHARMACY assistant \u2013 shown near the top centre");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](129, "li");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](130, "RUNNER \u2013 shown near the top centre-right");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](126, "REST CALL LOGS");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](131, "p");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](132, "Around the area where these actors are displayed, are overlaid links, which will launch the relevant tab on the UI for each of those actors.");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](127, "h4");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](128, "PRESENTATION");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](129, "p");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](130, "The UI starts at the Presentation page, which can be resized to best display the graphical content. Before the demonstration starts, click on the \u2018Open Production\u2019 \u2018Open Messages\u2019, and \u2018Open BPL\u2019 buttons to keep the respective pages on the IRIS for Health Management Portal open and ready. The visibility of these instructions can be toggled by the \u2018Show Instructions\u2019 / \u2018Hide Instructions\u2019 button on the lower right of the page.");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](131, "h5");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](132, "Actors and overlaid links");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](133, "p");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](134, "A similar overlaid link is centred on the IRIS interoperability icon and launches the Production page of the IRIS for Health Management Portal.");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](134, "The actors of interest in this demonstration are captioned in red font on the diagram:");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](135, "h5");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](136, "Resizing");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](135, "ul");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](136, "li");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](137, "ADMISSIONS (ADT) staff \u2013 shown near the top left");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](137, "p");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](138, "Resizing the webpage, has marginal effect on the relative movement of the overlaid links, whose positions are dynamically recomputed. The best practice is to use the tab navigation links along the top of the application.");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](138, "li");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](139, "PHARMACY assistant \u2013 shown near the top centre");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](139, "h4");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](140, "ADMISSIONS / DISCHARGE");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](141, "p");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](142, "This tab presents an ADT entry screen with the minimal fields required to give the audience a feel for the patient data which we will be referring to in the demonstration. The fields are prepopulated with default values. Changing the name of the patient on the UI will be reflected in the database and related interoperability production message trace. When a patient is admitted, a HL7v2 message with the patient data is generated. However, many of the fields contain default / synthetic values. After clicking \u2018Admit\u2019 view the message trace in the Management Portal. Then return to PHARMACY tab on the web application.");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](143, "h4");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](144, "PHARMACY");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](145, "p");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](146, "This tab contains a \u2018tablet-like\u2019 UI and features some of the functionality which the pharmacy assistant will need to trigger the relevant events required for this demonstration.");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](147, "h5");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](148, "Menu navigation:");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](149, "ul");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](150, "li");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](151, "Link - > Discharge Document ");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](152, "ul", 4);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](153, "li");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](154, "The pharmacy assistant uses this to link the discharge document with the inpatient spell id for that patient visit by clicking the \u2018Scan\u2019 button which changes to \u2018Capture\u2019 when a dummy discharge document is displayed.");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](155, "li");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](156, "Click the \u2018Capture\u2019 button. The discharge document disappears from view.");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](157, "li");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](158, "View the message trace in Management Portal before continuing with the next step.");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](140, "li");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](141, "RUNNER \u2013 shown near the top centre-right");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](142, "p");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](143, "Around the area where these actors are displayed, are overlaid links, which will launch the relevant tab on the UI for each of those actors.");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](159, "li");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](160, "Dispense - > Generate Label: ");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](161, "ul", 4);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](162, "li");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](163, "Enter PAS number and date");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](144, "p");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](145, "A similar overlaid link is centred on the IRIS interoperability icon and launches the Production page of the IRIS for Health Management Portal.");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](146, "h5");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](147, "Resizing");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](148, "p");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](149, "Resizing the webpage, has marginal effect on the relative movement of the overlaid links, whose positions are dynamically recomputed. The best practice is to use the tab navigation links along the top of the application.");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](150, "h4");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](151, "ADMISSIONS / DISCHARGE");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](152, "p");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](153, "This tab presents an ADT entry screen with the minimal fields required to give the audience a feel for the patient data which we will be referring to in the demonstration. The fields are prepopulated with default values. Changing the name of the patient on the UI will be reflected in the database and related interoperability production message trace. When a patient is admitted, a HL7v2 message with the patient data is generated. However, many of the fields contain default / synthetic values. After clicking \u2018Admit\u2019 view the message trace in the Management Portal. Then return to PHARMACY tab on the web application.");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](154, "h4");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](155, "PHARMACY");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](156, "p");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](157, "This tab contains a \u2018tablet-like\u2019 UI and features some of the functionality which the pharmacy assistant will need to trigger the relevant events required for this demonstration.");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](158, "h5");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](159, "Menu navigation:");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](160, "ul");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](161, "li");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](162, "Link - > Discharge Document ");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](163, "ul", 2);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](164, "li");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](165, "Click \u2018Retrieve Inpatient Spell Id\u2019 button");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](165, "The pharmacy assistant uses this to link the discharge document with the inpatient spell id for that patient visit by clicking the \u2018Scan\u2019 button which changes to \u2018Capture\u2019 when a dummy discharge document is displayed.");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](166, "li");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](167, "View the message trace in Management Portal before continuing with the next step.");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](167, "Click the \u2018Capture\u2019 button. The discharge document disappears from view.");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](168, "li");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](169, "Click \u2018Retrieve Patient Location Id\u2019 button which is now seen enabled.");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](169, "View the message trace in Management Portal before continuing with the next step.");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](170, "li");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](171, "View the message trace in Management Portal before continuing with the next step.");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](171, "Dispense - > Generate Label: ");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](172, "ul", 2);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](173, "li");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](174, "Enter PAS number and date");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](172, "li");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](173, "Click \u2018Generate Pharmacy Label\u2019 button to simulate the label being created with the above information incorporated within it. A dummy label is displayed on the UI.");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](175, "li");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](176, "Click \u2018Retrieve Inpatient Spell Id\u2019 button");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](174, "li");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](175, "Dispense -> Print ");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](176, "ul", 4);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](177, "li");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](178, "Explain that this menu would be used to print the pharmacy label which will be attached to the medicines bag(s)");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](178, "View the message trace in Management Portal before continuing with the next step.");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](179, "li");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](180, "Click \u2018Retrieve Patient Location Id\u2019 button which is now seen enabled.");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](181, "li");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](182, "View the message trace in Management Portal before continuing with the next step.");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](183, "li");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](184, "Click \u2018Generate Pharmacy Label\u2019 button to simulate the label being created with the above information incorporated within it. A dummy label is displayed on the UI.");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](185, "li");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](186, "Dispense -> Print ");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](187, "ul", 2);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](188, "li");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](189, "Explain that this menu would be used to print the pharmacy label which will be attached to the medicines bag(s)");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](179, "h4");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](180, "RUNNER APP");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](190, "h4");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](191, "RUNNER APP");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](181, "p");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](182, "This tab contains a \u2018smartphone-like\u2019 UI and features some of the functionality which a designated runner will need to trigger the relevant events required for this demonstration.");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](192, "p");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](193, "This tab contains a \u2018smartphone-like\u2019 UI and features some of the functionality which a designated runner will need to trigger the relevant events required for this demonstration.");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](183, "h5");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](184, "Menu navigation:");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](194, "h5");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](195, "Menu navigation:");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](185, "ul");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](186, "li");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](187, "Identify -> Location: ");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](188, "ul", 4);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](189, "li");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](190, "The runner uses this to link to look up the friendly name for the Pharmacy Pigeonhole by clicking the \u2018Scan\u2019 button which changes to \u2018Capture\u2019 when the location barcode for Monkswell Ward Collection Slot is displayed.");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](191, "li");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](192, "View the message trace in Management Portal before continuing with the next step.");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](193, "li");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](194, "Explain that the Identify -> Ward menu may be used to scan which ward the medicine bag(s) have been delivered to.");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](195, "li");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](196, "Deliver -> Retrieve Items ");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](197, "ul", 4);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](198, "li");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](199, "By providing the location name for the destination, the runner is able to view a list of the location from where the medications are to be collected. The checklist keeps track of the collections as the runner picks up medicines from each of the locations. When all the locations have been picked up from, the button becomes disabled.");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](196, "ul");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](197, "li");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](198, "Identify -> Location: ");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](199, "ul", 2);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](200, "li");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](201, "View the message trace in Management Portal which shows a FHIR bundle with a host of information on the patient. As might be expected, only necessary information is displayed within the RUNNER APP.");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](201, "The runner uses this to link to look up the friendly name for the Pharmacy Pigeonhole by clicking the \u2018Scan\u2019 button which changes to \u2018Capture\u2019 when the location barcode for Monkswell Ward Collection Slot is displayed.");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](202, "li");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](203, "View the message trace in Management Portal before continuing with the next step.");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](204, "li");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](205, "Explain that the Identify -> Ward menu may be used to scan which ward the medicine bag(s) have been delivered to.");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](206, "li");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](207, "Deliver -> Retrieve Items ");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](208, "ul", 2);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](209, "li");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](210, "By providing the location name for the destination, the runner is able to view a list of the location from where the medications are to be collected. The checklist keeps track of the collections as the runner picks up medicines from each of the locations. When all the locations have been picked up from, the button becomes disabled.");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](211, "li");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](212, "View the message trace in Management Portal which shows a FHIR bundle with a host of information on the patient. As might be expected, only necessary information is displayed within the RUNNER APP.");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](202, "h4");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](203, "REST CALL LOGS");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](213, "h4");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](214, "REST CALL LOGS");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](204, "p");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](205, "After each of the steps above, a trace is also sent to this part of the app to show that the REST calls return corresponding data to the front end, as is visible in the message traces. This can be used for both, to establish that the frontend is communicating correctly with the IRIS instance, as well as giving the audience confidence in the functionality being demonstrated.");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](215, "p");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](216, "After each of the steps above, a trace is also sent to this part of the app to show that the REST calls return corresponding data to the front end, as is visible in the message traces. This can be used for both, to establish that the frontend is communicating correctly with the IRIS instance, as well as giving the audience confidence in the functionality being demonstrated.");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-    } }, styles: [".list-lower-alpha[_ngcontent-%COMP%]{\n    list-style-type:lower-alpha;\n}\n.list-lower-roman[_ngcontent-%COMP%]{\n\n    list-style-type:lower-roman;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvcHJlc2VudGF0aW9uL2luc3RydWN0aW9ucy9pbnN0cnVjdGlvbnMuY29tcG9uZW50LmNzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtJQUNJLDJCQUEyQjtBQUMvQjtBQUNBOztJQUVJLDJCQUEyQjtBQUMvQiIsImZpbGUiOiJzcmMvYXBwL3ByZXNlbnRhdGlvbi9pbnN0cnVjdGlvbnMvaW5zdHJ1Y3Rpb25zLmNvbXBvbmVudC5jc3MiLCJzb3VyY2VzQ29udGVudCI6WyIubGlzdC1sb3dlci1hbHBoYXtcbiAgICBsaXN0LXN0eWxlLXR5cGU6bG93ZXItYWxwaGE7XG59XG4ubGlzdC1sb3dlci1yb21hbntcblxuICAgIGxpc3Qtc3R5bGUtdHlwZTpsb3dlci1yb21hbjtcbn0iXX0= */"] });
+    } }, styles: [".list-lower-alpha[_ngcontent-%COMP%]{\n  list-style-type:lower-alpha;\n}\n\n.list-lower-roman[_ngcontent-%COMP%]{\n  list-style-type:lower-roman;\n}\n\n.list-circle[_ngcontent-%COMP%] {\n  list-style-type:circle;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvcHJlc2VudGF0aW9uL2luc3RydWN0aW9ucy9pbnN0cnVjdGlvbnMuY29tcG9uZW50LmNzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNFLDJCQUEyQjtBQUM3Qjs7QUFFQTtFQUNFLDJCQUEyQjtBQUM3Qjs7QUFFQTtFQUNFLHNCQUFzQjtBQUN4QiIsImZpbGUiOiJzcmMvYXBwL3ByZXNlbnRhdGlvbi9pbnN0cnVjdGlvbnMvaW5zdHJ1Y3Rpb25zLmNvbXBvbmVudC5jc3MiLCJzb3VyY2VzQ29udGVudCI6WyIubGlzdC1sb3dlci1hbHBoYXtcbiAgbGlzdC1zdHlsZS10eXBlOmxvd2VyLWFscGhhO1xufVxuXG4ubGlzdC1sb3dlci1yb21hbntcbiAgbGlzdC1zdHlsZS10eXBlOmxvd2VyLXJvbWFuO1xufVxuXG4ubGlzdC1jaXJjbGUge1xuICBsaXN0LXN0eWxlLXR5cGU6Y2lyY2xlO1xufVxuXG4iXX0= */"] });
 /*@__PURE__*/ (function () { _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵsetClassMetadata"](InstructionsComponent, [{
         type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"],
         args: [{
@@ -1657,7 +1695,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-function PresentationComponent_div_26_Template(rf, ctx) { if (rf & 1) {
+function PresentationComponent_div_28_Template(rf, ctx) { if (rf & 1) {
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "div");
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](1, "app-instructions");
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
@@ -1697,8 +1735,11 @@ class PresentationComponent {
         if (destination == 'production') {
             url = url + ':52773/csp/healthshare/epcis/EnsPortal.ProductionConfig.zen?PRODUCTION=EPCIS.intersystems.Production';
         }
-        else if (destination = 'messages') {
+        else if (destination == 'messages') {
             url = url + ':52773/csp/healthshare/epcis/EnsPortal.MessageViewer.zen';
+        }
+        else if (destination == 'BPL') {
+            url = url + ':52773/csp/healthshare/epcis/EnsPortal.BPLEditor.zen?BP=EPCIS.intersystems.HL7toLocationProcess.bpl';
         }
         window.open(url, '_blank').focus();
     }
@@ -1706,7 +1747,7 @@ class PresentationComponent {
 PresentationComponent.ɵfac = function PresentationComponent_Factory(t) { return new (t || PresentationComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_services_epcis_iris_service__WEBPACK_IMPORTED_MODULE_1__["EPCISIRISService"])); };
 PresentationComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({ type: PresentationComponent, selectors: [["app-presentation"]], features: [_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵProvidersFeature"]([
             _services_epcis_iris_service__WEBPACK_IMPORTED_MODULE_1__["EPCISIRISService"]
-        ])], decls: 27, vars: 1, consts: [[1, "container"], ["src", "/assets/img/EPCISPresentation.jpg", 1, "presImg"], [1, "btn"], ["mat-icon-button", "", "type", "button", "color", "transparent", 1, "adtBtn", 3, "click"], ["mat-icon-button", "", "type", "button", "color", "transparent", 1, "pharmBtn", 3, "click"], ["mat-icon-button", "", "type", "button", "color", "transparent", 1, "runBtn", 3, "click"], ["mat-icon-button", "", "type", "button", "color", "transparent", 1, "prodBtn", 3, "click"], [1, "navBtnGroup"], ["mat-raised-button", "", "type", "button", "color", "warn", 3, "click"], ["mat-raised-button", "", "color", "primary", 3, "click"], ["id", "showHideButton", "mat-raised-button", "", "color", "primary", 3, "click"], [4, "ngIf"]], template: function PresentationComponent_Template(rf, ctx) { if (rf & 1) {
+        ])], decls: 29, vars: 1, consts: [[1, "container"], ["src", "/assets/img/EPCISPresentation.jpg", 1, "presImg"], [1, "btn"], ["mat-icon-button", "", "type", "button", "color", "transparent", 1, "adtBtn", 3, "click"], ["mat-icon-button", "", "type", "button", "color", "transparent", 1, "pharmBtn", 3, "click"], ["mat-icon-button", "", "type", "button", "color", "transparent", 1, "runBtn", 3, "click"], ["mat-icon-button", "", "type", "button", "color", "transparent", 1, "prodBtn", 3, "click"], [1, "navBtnGroup"], ["mat-raised-button", "", "color", "accent", 3, "click"], ["mat-raised-button", "", "color", "primary", 3, "click"], ["id", "showHideButton", "mat-raised-button", "", "color", "primary", 3, "click"], [4, "ngIf"]], template: function PresentationComponent_Template(rf, ctx) { if (rf & 1) {
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "div", 0);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](1, "img", 1);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](2, "div", 2);
@@ -1752,15 +1793,19 @@ PresentationComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵde
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("click", function PresentationComponent_Template_button_click_22_listener() { return ctx.openInNewTab("messages"); });
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](23, "Open Messages");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](24, "button", 10);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("click", function PresentationComponent_Template_button_click_24_listener() { return ctx.onShowHide(); });
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](25, "Show Instructions");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](24, "button", 9);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("click", function PresentationComponent_Template_button_click_24_listener() { return ctx.openInNewTab("BPL"); });
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](25, "Open BPL");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](26, "button", 10);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("click", function PresentationComponent_Template_button_click_26_listener() { return ctx.onShowHide(); });
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](27, "Show Instructions");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](26, PresentationComponent_div_26_Template, 2, 0, "div", 11);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](28, PresentationComponent_div_28_Template, 2, 0, "div", 11);
     } if (rf & 2) {
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](26);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](28);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngIf", ctx.showInstructions);
     } }, directives: [_angular_material_button__WEBPACK_IMPORTED_MODULE_2__["MatButton"], _angular_common__WEBPACK_IMPORTED_MODULE_3__["NgIf"], _instructions_instructions_component__WEBPACK_IMPORTED_MODULE_4__["InstructionsComponent"]], styles: [".container[_ngcontent-%COMP%] {\n  position:relative;\n}\n.page-heading[_ngcontent-%COMP%] {\n  \n  font-size:24pt;\n  font-weight: bold;\n  margin-left: 0%;\n  margin-bottom: 20px;\n}\n.presImg[_ngcontent-%COMP%] {\n  position: relative;\n  max-width:100%;\n  height:auto;\n}\n.btn[_ngcontent-%COMP%] {\n  background: 'transparent';\n}\n.adtBtn[_ngcontent-%COMP%] {\n  position: absolute;\n  background: 'transparent';\n  min-width: 100px!important;\n  font-size:48pt;\n  left: 7%;\n  top: 24%;\n  color: transparent;\n}\n.pharmBtn[_ngcontent-%COMP%] {\n  position: absolute;\n  background: 'transparent';\n  min-width: 100px!important;\n  font-size:48pt;\n  left:32%;\n  top:24%;\n  color: transparent;\n}\n.runBtn[_ngcontent-%COMP%] {\n  position: absolute;\n  background: 'transparent';\n  min-width: 100px!important;\n  font-size:48pt;\n  left:65%;\n  top:25%;\n  color: transparent;\n}\n.prodBtn[_ngcontent-%COMP%] {\n  position: absolute;\n  background: 'transparent';\n  min-width: 100px!important;\n  font-size:48pt;\n  left:50%;\n  top:65%;\n  color: transparent;  \n}\n.navBtnGroup[_ngcontent-%COMP%] {\n  margin: auto;\n  display: flex;\n  flex-direction: row;\n  justify-content: center;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvcHJlc2VudGF0aW9uL3ByZXNlbnRhdGlvbi5jb21wb25lbnQuY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0VBQ0UsaUJBQWlCO0FBQ25CO0FBQ0E7RUFDRTtlQUNhO0VBQ2IsY0FBYztFQUNkLGlCQUFpQjtFQUNqQixlQUFlO0VBQ2YsbUJBQW1CO0FBQ3JCO0FBRUE7RUFDRSxrQkFBa0I7RUFDbEIsY0FBYztFQUNkLFdBQVc7QUFDYjtBQUVBO0VBQ0UseUJBQXlCO0FBQzNCO0FBRUE7RUFDRSxrQkFBa0I7RUFDbEIseUJBQXlCO0VBQ3pCLDBCQUEwQjtFQUMxQixjQUFjO0VBQ2QsUUFBUTtFQUNSLFFBQVE7RUFDUixrQkFBa0I7QUFDcEI7QUFFQTtFQUNFLGtCQUFrQjtFQUNsQix5QkFBeUI7RUFDekIsMEJBQTBCO0VBQzFCLGNBQWM7RUFDZCxRQUFRO0VBQ1IsT0FBTztFQUNQLGtCQUFrQjtBQUNwQjtBQUVBO0VBQ0Usa0JBQWtCO0VBQ2xCLHlCQUF5QjtFQUN6QiwwQkFBMEI7RUFDMUIsY0FBYztFQUNkLFFBQVE7RUFDUixPQUFPO0VBQ1Asa0JBQWtCO0FBQ3BCO0FBRUE7RUFDRSxrQkFBa0I7RUFDbEIseUJBQXlCO0VBQ3pCLDBCQUEwQjtFQUMxQixjQUFjO0VBQ2QsUUFBUTtFQUNSLE9BQU87RUFDUCxrQkFBa0I7QUFDcEI7QUFFQTtFQUNFLFlBQVk7RUFDWixhQUFhO0VBQ2IsbUJBQW1CO0VBQ25CLHVCQUF1QjtBQUN6QiIsImZpbGUiOiJzcmMvYXBwL3ByZXNlbnRhdGlvbi9wcmVzZW50YXRpb24uY29tcG9uZW50LmNzcyIsInNvdXJjZXNDb250ZW50IjpbIi5jb250YWluZXIge1xuICBwb3NpdGlvbjpyZWxhdGl2ZTtcbn1cbi5wYWdlLWhlYWRpbmcge1xuICAvKmNvbG9yOiAjM0Y1MUI1O1xuICBjb2xvcjogZ3JleTsqL1xuICBmb250LXNpemU6MjRwdDtcbiAgZm9udC13ZWlnaHQ6IGJvbGQ7XG4gIG1hcmdpbi1sZWZ0OiAwJTtcbiAgbWFyZ2luLWJvdHRvbTogMjBweDtcbn1cblxuLnByZXNJbWcge1xuICBwb3NpdGlvbjogcmVsYXRpdmU7XG4gIG1heC13aWR0aDoxMDAlO1xuICBoZWlnaHQ6YXV0bztcbn1cblxuLmJ0biB7XG4gIGJhY2tncm91bmQ6ICd0cmFuc3BhcmVudCc7XG59XG5cbi5hZHRCdG4ge1xuICBwb3NpdGlvbjogYWJzb2x1dGU7XG4gIGJhY2tncm91bmQ6ICd0cmFuc3BhcmVudCc7XG4gIG1pbi13aWR0aDogMTAwcHghaW1wb3J0YW50O1xuICBmb250LXNpemU6NDhwdDtcbiAgbGVmdDogNyU7XG4gIHRvcDogMjQlO1xuICBjb2xvcjogdHJhbnNwYXJlbnQ7XG59XG5cbi5waGFybUJ0biB7XG4gIHBvc2l0aW9uOiBhYnNvbHV0ZTtcbiAgYmFja2dyb3VuZDogJ3RyYW5zcGFyZW50JztcbiAgbWluLXdpZHRoOiAxMDBweCFpbXBvcnRhbnQ7XG4gIGZvbnQtc2l6ZTo0OHB0O1xuICBsZWZ0OjMyJTtcbiAgdG9wOjI0JTtcbiAgY29sb3I6IHRyYW5zcGFyZW50O1xufVxuXG4ucnVuQnRuIHtcbiAgcG9zaXRpb246IGFic29sdXRlO1xuICBiYWNrZ3JvdW5kOiAndHJhbnNwYXJlbnQnO1xuICBtaW4td2lkdGg6IDEwMHB4IWltcG9ydGFudDtcbiAgZm9udC1zaXplOjQ4cHQ7XG4gIGxlZnQ6NjUlO1xuICB0b3A6MjUlO1xuICBjb2xvcjogdHJhbnNwYXJlbnQ7XG59XG5cbi5wcm9kQnRuIHtcbiAgcG9zaXRpb246IGFic29sdXRlO1xuICBiYWNrZ3JvdW5kOiAndHJhbnNwYXJlbnQnO1xuICBtaW4td2lkdGg6IDEwMHB4IWltcG9ydGFudDtcbiAgZm9udC1zaXplOjQ4cHQ7XG4gIGxlZnQ6NTAlO1xuICB0b3A6NjUlO1xuICBjb2xvcjogdHJhbnNwYXJlbnQ7ICBcbn1cblxuLm5hdkJ0bkdyb3VwIHtcbiAgbWFyZ2luOiBhdXRvO1xuICBkaXNwbGF5OiBmbGV4O1xuICBmbGV4LWRpcmVjdGlvbjogcm93O1xuICBqdXN0aWZ5LWNvbnRlbnQ6IGNlbnRlcjtcbn0iXX0= */"] });
 /*@__PURE__*/ (function () { _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵsetClassMetadata"](PresentationComponent, [{
@@ -1775,6 +1820,17 @@ PresentationComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵde
             }]
     }], function () { return [{ type: _services_epcis_iris_service__WEBPACK_IMPORTED_MODULE_1__["EPCISIRISService"] }]; }, null); })();
 
+
+/***/ }),
+
+/***/ "kiQV":
+/*!**********************!*\
+  !*** ./package.json ***!
+  \**********************/
+/*! exports provided: name, version, scripts, private, dependencies, devDependencies, default */
+/***/ (function(module) {
+
+module.exports = JSON.parse("{\"name\":\"epcis-app\",\"version\":\"1.0.1\",\"scripts\":{\"ng\":\"ng\",\"start\":\"ng serve\",\"build\":\"ng build\",\"test\":\"ng test\",\"lint\":\"ng lint\",\"e2e\":\"ng e2e\"},\"private\":true,\"dependencies\":{\"@angular/animations\":\"~10.1.3\",\"@angular/cdk\":\"^10.2.7\",\"@angular/common\":\"~10.1.3\",\"@angular/compiler\":\"~10.1.3\",\"@angular/core\":\"~10.1.3\",\"@angular/forms\":\"~10.1.3\",\"@angular/material\":\"^10.2.7\",\"@angular/platform-browser\":\"~10.1.3\",\"@angular/platform-browser-dynamic\":\"~10.1.3\",\"@angular/router\":\"~10.1.3\",\"rxjs\":\"~6.6.0\",\"tslib\":\"^2.0.0\",\"zone.js\":\"~0.10.2\"},\"devDependencies\":{\"@angular-devkit/build-angular\":\"~0.1001.3\",\"@angular/cli\":\"~10.1.3\",\"@angular/compiler-cli\":\"~10.1.3\",\"@types/node\":\"^12.11.1\",\"@types/jasmine\":\"~3.5.0\",\"@types/jasminewd2\":\"~2.0.3\",\"codelyzer\":\"^6.0.0\",\"jasmine-core\":\"~3.6.0\",\"jasmine-spec-reporter\":\"~5.0.0\",\"karma\":\"~5.0.0\",\"karma-chrome-launcher\":\"~3.1.0\",\"karma-coverage-istanbul-reporter\":\"~3.0.2\",\"karma-jasmine\":\"~4.0.0\",\"karma-jasmine-html-reporter\":\"^1.5.0\",\"protractor\":\"~7.0.0\",\"ts-node\":\"~8.3.0\",\"tslint\":\"~6.1.0\",\"typescript\":\"~4.0.2\"}}");
 
 /***/ }),
 

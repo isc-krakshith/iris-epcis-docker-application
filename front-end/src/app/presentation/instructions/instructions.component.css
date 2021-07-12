@@ -1,7 +1,12 @@
 .list-lower-alpha{
-    list-style-type:lower-alpha;
+  list-style-type:lower-alpha;
 }
-.list-lower-roman{
 
-    list-style-type:lower-roman;
+.list-lower-roman{
+  list-style-type:lower-roman;
 }
+
+.list-circle {
+  list-style-type:circle;
+}
+

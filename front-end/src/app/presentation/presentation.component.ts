@@ -55,8 +55,11 @@ export class PresentationComponent implements OnInit {
     {
       url = url+':52773/csp/healthshare/epcis/EnsPortal.ProductionConfig.zen?PRODUCTION=EPCIS.intersystems.Production'
     }
-    else if (destination = 'messages') {
+    else if (destination == 'messages') {
       url = url + ':52773/csp/healthshare/epcis/EnsPortal.MessageViewer.zen'
+    }
+    else if (destination == 'BPL') {
+      url = url + ':52773/csp/healthshare/epcis/EnsPortal.BPLEditor.zen?BP=EPCIS.intersystems.HL7toLocationProcess.bpl'
     }
     window.open(url, '_blank').focus();
   }
