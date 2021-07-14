@@ -26,7 +26,7 @@ export class RetrieveItemsComponent implements OnInit {
     completed: false,
     color: 'primary',
     subtasks: [
-      {"name":"  Freezer", "completed":false, "color": "primary"},
+      {"name":"  Fridge", "completed":false, "color": "primary"},
       {"name":"  Controlled Items Safe", "completed":false, "color": "primary"},
       {"name":"  Pigeon Hole", "completed":false, "color": "primary"}]
   };

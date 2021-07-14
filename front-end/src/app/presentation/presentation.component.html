@@ -7,13 +7,10 @@
         <button mat-icon-button type="button" class= "prodBtn" color="transparent" (click)="openInNewTab('production')">[ ]</button>
     </div>
     <div class ="navBtnGroup">
-        <button mat-raised-button color="accent" (click)='moveToSelectedTab("ADMISSION / DISCHARGE")'>Open ADT</button>
-        <button mat-raised-button color="accent" (click)='moveToSelectedTab("PHARMACY")'>Open Pharmacy UI</button>
-        <button mat-raised-button color="accent" (click)='moveToSelectedTab("RUNNER APP")'>Open Runner App</button>
-        <button mat-raised-button color="accent" (click)='moveToSelectedTab("REST CALL LOGS")'>Open Logs</button>
         <button mat-raised-button color="primary"(click)="openInNewTab('production')" >Open Production</button>
         <button mat-raised-button color="primary"(click)="openInNewTab('messages')" >Open Messages</button>
         <button mat-raised-button color="primary" (click)="openInNewTab('BPL')" >Open BPL</button>
+        <button mat-raised-button color="primary" (click)="openIRISTabs()" >Open All IRIS Tabs</button>
         <button id = "showHideButton" mat-raised-button color="primary"(click)="onShowHide()" >Show Instructions</button>
     </div>
 </div>

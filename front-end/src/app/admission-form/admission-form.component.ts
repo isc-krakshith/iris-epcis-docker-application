@@ -20,7 +20,7 @@ export class AdmissionFormComponent implements OnInit{
   constructor(
     private epcisIRISservice: EPCISIRISService
   ) {
-    this.admitForm.setValue({firstName:'Jane', lastName:'Doe', mrn: 'T918273', date: (new Date().toISOString())});
+    this.admitForm.setValue({firstName:'Joe', lastName:'Bloggs', mrn: 'T918273', date: (new Date().toISOString())});
 
    }
   onSubmit(){}

@@ -61,7 +61,20 @@ export class PresentationComponent implements OnInit {
     else if (destination == 'BPL') {
       url = url + ':52773/csp/healthshare/epcis/EnsPortal.BPLEditor.zen?BP=EPCIS.intersystems.HL7toLocationProcess.bpl'
     }
-    window.open(url, '_blank').focus();
+    window.open(url, '_blank','location=yes,height=1080,width=1920,scrollbars=yes,status=yes').focus();
+  }
+
+  openIRISTabs()
+  {
+    let url:string = '';
+    url = this.urlChecker.getBackendIP();
+    url = url + ':52773/csp/healthshare/epcis/EnsPortal.';
+    let production:string = 'ProductionConfig.zen?PRODUCTION=EPCIS.intersystems.Production';
+    let messages: string = 'MessageViewer.zen';
+    let BPL: string = 'BPLEditor.zen?BP=EPCIS.intersystems.HL7toLocationProcess.bpl';
+    window.open(url+BPL, '_blank').focus();
+    window.open(url+messages, '_blank').focus();
+    window.open(url+production, '_blank').focus();
   }
 
 }
