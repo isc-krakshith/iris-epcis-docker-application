@@ -45,7 +45,7 @@ export class EPCISIRISService {
     let serverHostURL = '';
     let serverPort = '';
 
-    if (thislocation.search('csp/epcis/index.html') == 0/*ends with csp/epcis/index.html*/ )
+    if (thislocation.indexOf('csp') > 0/*ends with csp/epcis/index.html*/ )
     {
       //front-end is hosted on IRIS's webserver
       //determining server address is a no-brainer
