@@ -30,23 +30,54 @@ export class EPCISIRISService {
     };
   }
 
-  getBackendIP():string {
-    //when the front end is run in an angular container
-    //environment.apiURL will be an empty string IF backend IP address
-    //is not provided to ng at build time, environment variable HOST_IP
-    if ((environment.apiURL==="localhost")||(environment.apiURL==="")) {
-      //If it is set to 'localhost', it is still possible that
-      //that the angular content is being served remotely
-      //Then the most reliable way to find the IP address of the container
-      //is to read it from the browser adddress bar
-      // so return the substring between 'http://' and the port marker ':' */
-      let thislocation = location.toString()
-      thislocation = thislocation.substr(7,(thislocation.indexOf(':',7)-7));
-      return 'http://'+thislocation;
+  getServerAddress():string{
+    //lets first determine where  front-end is running
+    let thislocation = location.toString()
+
+    //find the location of the ':' which precedes the port
+    //it is effectively the final ':' in the location string
+    let portMarker = thislocation.lastIndexOf(':');
+
+    //find the begining of the server path
+    //this is the '/' which follows the port
+    let pathMarker = thislocation.indexOf('/', portMarker);
+
+    let serverHostURL = '';
+    let serverPort = '';
+
+    if (thislocation.search('csp/epcis/index.html') == 0/*ends with csp/epcis/index.html*/ )
+    {
+      //front-end is hosted on IRIS's webserver
+      //determining server address is a no-brainer
+      //as the address is part of the location string
+
+      //find the substring from start up to and including the port
+      //(short of the first '/' after the port )
+      serverHostURL = thislocation.substr(0,pathMarker);
     }
-    else {
-      return 'http://'+environment.apiURL;
+    else{
+      //front-end is running independently in an angular container
+      //If backend IP and PORT are not specified to ng at build time
+      //via environment variables: HOST_IP and HOST_PORT
+      //environment.apiURL and environment.apiPORT will be empty strings
+      //and so we have more work to do
+      if ((environment.apiURL==="localhost")||(environment.apiURL==="")) {
+      //find the substring from start up to the port marker ':' )
+
+      serverHostURL = thislocation.substr(0,portMarker);
+      }
+      else {
+        serverHostURL = 'http://'.concat(environment.apiURL)
+      }
+      if ((environment.apiPORT==="52773")||(environment.apiPORT==="")){
+        serverPort = "52773";
+      }
+      else{
+        serverPort = environment.apiPORT;
+      }
+      serverHostURL = serverHostURL.concat(':').concat(serverPort);
     }
+    return serverHostURL
   }
 
   // It appears unnecessary to create http options / headers
@@ -77,7 +108,7 @@ export class EPCISIRISService {
 
   admitPatient(admitForm: any):Observable<any> {
     const headers = new HttpHeaders()
-    let url = this.getBackendIP()+':52773/query/demoStep1'
+    let url = this.getServerAddress().concat('/query/demoStep1')
     return this.http.post<any>(url, admitForm,this.httpOptions)
     .pipe(
       tap((newAdmit: any) => this.log('Admit: ' + `${newAdmit.PAS}`)),
@@ -86,7 +117,7 @@ export class EPCISIRISService {
 
   linkDischarge():Observable<any> {
     const headers = new HttpHeaders()
-    let url = this.getBackendIP()+':52773/query/demoStep2'
+    let url = this.getServerAddress().concat('/query/demoStep2')
     return this.http.get<any>(url)
     .pipe(
       tap((newLink: any) => this.log('Link Discharge Document: '+`${newLink}`)),
@@ -95,7 +126,7 @@ export class EPCISIRISService {
 
   getInpatientSpellId(genLabelForm: any):Observable<any> {
     const headers = new HttpHeaders()
-    let url = this.getBackendIP()+':52773/query/demoStep3'
+    let url = this.getServerAddress().concat('/query/demoStep3')
     return this.http.get<any>(url, genLabelForm)
     .pipe(
       tap((any: any) => this.log('Inpatient Spell Id: '+`${any.EventQueryResult[0].EPCISBody.EventList.TransactionEvent[0].any[1]}`)),
@@ -105,7 +136,7 @@ export class EPCISIRISService {
 
   getPatientLocationId(genLabelForm: any):Observable<any> {
     const headers = new HttpHeaders()
-    let url = this.getBackendIP()+':52773/query/demoStep4'
+    let url = this.getServerAddress().concat('/query/demoStep4')
     return this.http.get<any>(url, genLabelForm)
     .pipe(
       tap((any: any) => this.log('Patient Location Id: '+`${any.EventQueryResult[0].EPCISBody.EventList.ObjectEvent[0].bizLocation.id}`)),
@@ -115,7 +146,7 @@ export class EPCISIRISService {
 
   linkPigeonHole():Observable<any> {
     const headers = new HttpHeaders()
-    let url = this.getBackendIP()+':52773/query/demoStep5'
+    let url = this.getServerAddress().concat('/query/demoStep5')
     return this.http.get<any>(url)
     .pipe(
       tap((newLink: any) => this.log('Link Pigeon Hole : '+`${newLink}`)),
@@ -124,7 +155,7 @@ export class EPCISIRISService {
 
   scanLocation(testPayload:any):Observable<any> {
     const headers = new HttpHeaders()
-    let url = this.getBackendIP()+':52773/query/demoStep6'
+    let url = this.getServerAddress().concat('/query/demoStep6')
     return this.http.get<any>(url,this.httpTextOptions)
     .pipe(
       tap((any: any) => this.log('Scan location : '+`${any}`)),
@@ -139,7 +170,7 @@ export class EPCISIRISService {
 
   retrieveItems(retrieveForm: any):Observable<any> {
     const headers = new HttpHeaders()
-    let url = this.getBackendIP()+':52773/query/demoStep7'
+    let url = this.getServerAddress().concat('/query/demoStep7')
     return this.http.get<any>(url,retrieveForm)
     .pipe(
       tap((any: any) => this.log('Retrieve Items : '+`${any}`)),
@@ -155,7 +186,7 @@ export class EPCISIRISService {
   dischargePatient(admitForm: any):Observable<any> {
 
     const headers = new HttpHeaders()
-    let url = this.getBackendIP()+':52773/query/demoStep8'
+    let url = this.getServerAddress().concat('/query/demoStep8')
     return this.http.post<any>(url, admitForm,this.httpOptions)
     .pipe(
       tap((newDischarge: any) => this.log('Discharge: ' + `${newDischarge.PAS}`)),

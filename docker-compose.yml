@@ -24,6 +24,7 @@ services:
   frontend:
     environment:
     - ENV_BACKEND_URI=${HOST_IP}
+    - ENV_BACKEND_PORT=${HOST_PORT}
     build:
       dockerfile: Dockerfile
       context: front-end

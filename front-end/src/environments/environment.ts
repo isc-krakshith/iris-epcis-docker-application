@@ -6,6 +6,7 @@ import { version } from '../../package.json';
 export const environment = {
   production: false,
   apiURL: 'localhost',
+  apiPORT: '52773',
   version: version
 };
 
