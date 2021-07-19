@@ -12,7 +12,7 @@ $ git clone https://github.com/isc-krakshith/iris-epcis-docker-application.git
 ```
 
 ### Open the terminal in this directory:
-#### (OPTIONAL) The frontend will always locate the IRIS server if both are running on the same host and on default ports. But if either the frontend and backend (IRIS) hosts are different and/or IRIS webserver is running on any but the default port (52773), please export one or both environment variables. eg. On Unix hosts... 
+#### (OPTIONAL) The frontend will always try to locate the IRIS server on the same host and on the default port (52773). But if IRIS is running on a different host from the frontend and/or IRIS webserver is running on any but the default port, please export one or both environment variables on the host where frontend is to be run, specifying HOST_IP (IPv4 address of the host where IRIS is running) and HOST_PORT (port on which IRIS webserver is accessible). eg. On Unix hosts... 
 ```
 export HOST_IP="XXX.XXX.XXX.XXX"
 export HOST_PORT="XXXX"
