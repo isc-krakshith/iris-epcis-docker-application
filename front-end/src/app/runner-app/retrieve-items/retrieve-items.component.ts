@@ -5,6 +5,7 @@ import {EPCISIRISService} from '../../services/epcis-iris.service';
 
 export interface Task {
   name: string;
+  quantity: number;
   completed: boolean;
   color: ThemePalette;
   subtasks?: Task[];
@@ -20,15 +21,20 @@ export class RetrieveItemsComponent implements OnInit {
   })
   
   isListVisible = false;
+  numItemsFridge:number = 0;
+  numItemsSafe:number = 0;
+  numItemsPigeonhole:number = 0;
+  totalItems:number = 0;
 
   task: Task = {
     name: 'All Picked',
-    completed: false,
+    quantity: this.totalItems,
+    completed: (this.totalItems? false:true),
     color: 'primary',
     subtasks: [
-      {"name":"  Fridge", "completed":false, "color": "primary"},
-      {"name":"  Controlled Items Safe", "completed":false, "color": "primary"},
-      {"name":"  Pigeon Hole", "completed":false, "color": "primary"}]
+      {"name":"  Fridge", "quantity":this.numItemsFridge, "completed":false, "color": "primary"},
+      {"name":"  Controlled Items Safe", "quantity":this.numItemsSafe, "completed":false, "color": "primary"},
+      {"name":"  Pigeon Hole", "quantity":this.numItemsPigeonhole, "completed":false, "color": "primary"}]
   };
 
   allComplete: boolean = false;
@@ -58,6 +64,11 @@ export class RetrieveItemsComponent implements OnInit {
     this.task.subtasks.forEach(t => t.completed = completed);
   }
 
+  updateList(qty:number) {
+    this.task.quantity = qty;
+    this.task.subtasks[2].quantity = qty
+  }
+
   onSubmit(){}
   
   ongetItems() {
@@ -73,6 +84,7 @@ export class RetrieveItemsComponent implements OnInit {
 
     }, error => {
       console.warn("There is something weird in retrieve items process", error);
+      this.updateList(this.getQty(error.error.text))
     })
     this.isListVisible = true;
   }
@@ -80,6 +92,22 @@ export class RetrieveItemsComponent implements OnInit {
   getItems(){
     console.log("Getting Items...");
     this.ongetItems();
+  }
+
+  getQty(data: string):number {
+    //we apportion the total quantity from the FHIR message to the three locations
+    //somewhat "dubiously" for now...
+    console.log("getQty ", data)
+    let qtyPos = data.indexOf('\"quantity\"');
+    let valPos = data.indexOf('\"value\"', qtyPos);
+    let colPos = data.indexOf(':', valPos); //position of colon following 'value'
+    let clsBracePos = data.indexOf('}',colPos); //position of closing curly brace
+    //sanity check see what we are reading
+    //console.log("qty: ", qtyPos, ": val: ", valPos, "; colon: ", colPos, "; brace: ", clsBracePos)
+    //the value of interest is between colPos and clsBracePos less 1
+    let quantity: string = data.substr((colPos+1), (clsBracePos-colPos-1))
+    //console.log("quantity: ", quantity)
+    return Number(quantity)
   }
   submitted = false;
 
