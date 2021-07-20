@@ -184,7 +184,7 @@ ClassMethod DemoLinkDocument() As %Status
   	set tTransaction=##class(EPCIS.epcis.TransactionEventType).%New()
   	set tTransaction.eventTime=$zd($H,3)_" 09:12:00"
   	set tBiz=##class(EPCIS.epcis.BusinessTransactionType).%New()
-  	set tBiz.content="urn:epc:id:gdti:50552084.0001.00009992"_^DEMO_"00001000"
+  	set tBiz.content="urn:epc:id:gdti:50552084.0001.0000357327"_^DEMO_"001000"
   	do tTransaction.bizTransactionList.Insert(tBiz)
   	do tTransaction.epcList.Insert("urn:epc:id:gsrn:50552084.0070101052")
   	set tTransaction.action="ADD"
@@ -195,7 +195,7 @@ ClassMethod DemoLinkDocument() As %Status
   	set tBizLocation.id="urn:epc:id:sgln:50552389.05340.0"
   	set tTransaction.readPoint=tReadPoint
   	set tTransaction.bizLocation=tBizLocation
-	set tAny="<nhs:PASnumber>F10105250552084</nhs:PASnumber><nhs:inpatientSpellId>4567890</nhs:inpatientSpellId>" 
+	set tAny="<nhs:PASnumber>F10105250552084</nhs:PASnumber><nhs:inpatientSpellId>"_"357327"_^DEMO_"</nhs:inpatientSpellId>" 
 	do tTransaction.any.Insert(tAny)
 	do tBody.EventList.TransactionEvent.Insert(tTransaction) 	
 	set tDoc.EPCISBody=tBody
@@ -216,7 +216,7 @@ ClassMethod DemoSpellId() As %Status
 	set tSC=$$$OK
 	set tRequest=##class(EPCIS.intersystems.EventQueryRequest).%New()
 
-	set tDischarge="'urn:epc:id:gdti:50552084.0001.00009992"_^DEMO_"00001000'"
+	set tDischarge="'urn:epc:id:gdti:50552084.0001.0000357327"_^DEMO_"001000'"
 	set param=##class(EPCIS.epcisq.QueryParam).%New()
 	set param.name="transactions"
 	set param.value=tDischarge
@@ -243,7 +243,7 @@ ClassMethod DemoPatientLocation() As %Status
 	set tSC=$$$OK
 	set tRequest=##class(EPCIS.intersystems.EventQueryRequest).%New()
 
-	set tSpellId="'"_357327_^DEMO_"'"
+	set tSpellId="'"_"357327"_^DEMO_"'"
 	set param=##class(EPCIS.epcisq.QueryParam).%New()
 	set param.name="inpatientSpellId"
 	set param.value=tSpellId
@@ -293,7 +293,7 @@ ClassMethod DemoDispense() As %Status
   	set tBizLocation.id="urn:epc:id:sgln:50552389.0520.0"
   	set tObject.readPoint=tReadPoint
   	set tObject.bizLocation=tBizLocation
-	set tAny="<nhs:inpatientSpellId>4567890</nhs:inpatientSpellId>" 
+	set tAny="<nhs:inpatientSpellId>"_"357327"_^DEMO_"</nhs:inpatientSpellId>" 
 	do tObject.any.Insert(tAny)
 	do tBody.EventList.ObjectEvent.Insert(tObject) 	
 	set tDoc.EPCISBody=tBody
