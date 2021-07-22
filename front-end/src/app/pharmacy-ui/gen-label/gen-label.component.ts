@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import {FormGroup, FormControl} from '@angular/forms';
 import {EPCISIRISService} from '../../services/epcis-iris.service';
 
@@ -11,6 +11,7 @@ import {EPCISIRISService} from '../../services/epcis-iris.service';
 })
 
 export class GenLabelComponent implements OnInit {
+  @Output() doneEvent = new EventEmitter();
   genLabelForm = new FormGroup({
     pas: new FormControl(''),
     date: new FormControl (''),
@@ -87,6 +88,7 @@ export class GenLabelComponent implements OnInit {
   genLabel() {
     console.log("Generating label...");
     this.onGenLabel();
+    this.doneEvent.emit('gen-label')
   }
   submitted = false;
 

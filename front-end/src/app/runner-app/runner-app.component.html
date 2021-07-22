@@ -16,11 +16,11 @@
       <button mat-menu-item (click) = "loadContent('comingsoon')">EPCIS Demo</button>
     </mat-menu>
     <div *ngIf = isidentifyLocation>
-      <scan function="scanLocation"></scan>
+      <scan (doneEvent)="reset($event)" function="scanLocation"></scan>
     </div>
     </div>
     <div *ngIf = isRetrieveItems>
-      <app-retrieve-items></app-retrieve-items>
+      <app-retrieve-items (doneEvent)="reset($event)"></app-retrieve-items>
     </div>
     <div *ngIf = isComingSoon>
         <comingsoon component="smartphone"></comingsoon>

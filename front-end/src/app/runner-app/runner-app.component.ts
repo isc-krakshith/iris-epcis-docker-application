@@ -15,6 +15,12 @@ export class RunnerAppComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  reset() {
+    setTimeout(() => {
+      this.loadContent('comingsoon');
+    }, 3000);
+  }
+
   loadContent(selection: String)
   {
     if (selection == 'identifyLocation'){

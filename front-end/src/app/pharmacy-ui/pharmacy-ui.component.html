@@ -24,15 +24,15 @@
   <button mat-menu-item (click) = "loadContent('comingsoon')">EPCIS Demo</button>
 </mat-menu>
 <div *ngIf = isScanDischarge>
-  <scan function="discharge"></scan>
+  <scan (doneEvent)="reset($event)" function="discharge"></scan>
 </div>
 <div *ngIf = isScanPigeonHole>
-  <scan function="pigeonHole"></scan>
+  <scan (doneEvent)="reset($event)" function="pigeonHole"></scan>
 </div>
 <div *ngIf = isComingSoon>
     <comingsoon component="tablet"></comingsoon>
 </div>
 <div *ngIf = isGenLabel>
-    <pharmacy-gen-label></pharmacy-gen-label>
+    <pharmacy-gen-label (doneEvent)="reset($event)"></pharmacy-gen-label>
 </div>
 </div>

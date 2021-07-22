@@ -16,6 +16,12 @@ export class PharmacyUiComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  reset() {
+    setTimeout(() => {
+      this.loadContent('comingsoon');
+    }, 3000);
+  }
+
   loadContent(selection: String)
   {
     if (selection == 'scanDischarge'){

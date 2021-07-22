@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { fade } from '../animation';
 import {FormGroup, FormControl} from '@angular/forms';
 import {EPCISIRISService} from '../../services/epcis-iris.service';
@@ -12,6 +12,7 @@ import {EPCISIRISService} from '../../services/epcis-iris.service';
 })
 export class ScanComponent implements OnInit {
   @Input() function: string;
+  @Output() doneEvent = new EventEmitter();
   scanForm = new FormGroup({
     locFrName: new FormControl('')
   })
@@ -142,6 +143,7 @@ export class ScanComponent implements OnInit {
 
   submit() {
     this.onSubmit();
+    this.doneEvent.emit(this.function)
     }
   
   extractLocationFriendlyName(response: string): string {

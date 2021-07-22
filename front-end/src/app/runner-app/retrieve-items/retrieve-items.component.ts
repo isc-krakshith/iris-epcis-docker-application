@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import {FormGroup, FormControl} from '@angular/forms';
 import {ThemePalette} from '@angular/material/core';
 import {EPCISIRISService} from '../../services/epcis-iris.service';
@@ -16,6 +16,7 @@ export interface Task {
   styleUrls: ['./retrieve-items.component.css']
 })
 export class RetrieveItemsComponent implements OnInit {
+  @Output() doneEvent= new EventEmitter();
   retrieveItemsForm = new FormGroup({
     location: new FormControl('')
   })
@@ -47,6 +48,7 @@ export class RetrieveItemsComponent implements OnInit {
   
   updateAllComplete() {
     this.allComplete = this.task.subtasks != null && this.task.subtasks.every(t => t.completed);
+    this.checkAllComplete();
   }
 
   someComplete(): boolean {
@@ -62,6 +64,13 @@ export class RetrieveItemsComponent implements OnInit {
       return;
     }
     this.task.subtasks.forEach(t => t.completed = completed);
+    this.checkAllComplete()
+  }
+
+  checkAllComplete() {
+    if (this.allComplete) {
+      this.doneEvent.emit('retrieve-items')
+    }
   }
 
   updateList(qty:number) {
