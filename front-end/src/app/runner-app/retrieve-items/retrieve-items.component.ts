@@ -33,8 +33,8 @@ export class RetrieveItemsComponent implements OnInit {
     completed: (this.totalItems? false:true),
     color: 'primary',
     subtasks: [
-      {"name":"  Fridge", "quantity":this.numItemsFridge, "completed":false, "color": "primary"},
-      {"name":"  Controlled Items Safe", "quantity":this.numItemsSafe, "completed":false, "color": "primary"},
+      {"name":"  Fridge", "quantity":this.numItemsFridge, "completed":this.numItemsFridge? false:true , "color": "primary"},
+      {"name":"  Controlled Items Safe", "quantity":this.numItemsSafe, "completed":this.numItemsSafe? false:true, "color": "primary"},
       {"name":"  Pigeon Hole", "quantity":this.numItemsPigeonhole, "completed":false, "color": "primary"}]
   };
 
