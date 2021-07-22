@@ -12,8 +12,8 @@ services:
       context: back-end
     container_name: backend
     ports:
-    - "9091:51773"
-    - "9092:52773"
+    - "51773:51773"
+    - "52773:52773"
     volumes:
     - ./back-end:/app
     - ~/IAMContainer.key:/usr/irissys/mgr/iris.key
