@@ -18,8 +18,8 @@ export class PharmacyUiComponent implements OnInit {
 
   reset() {
     setTimeout(() => {
-      this.loadContent('comingsoon');
-    }, 3000);
+      this.loadContent('resetview');
+    }, 3500);
   }
 
   loadContent(selection: String)
@@ -47,6 +47,12 @@ export class PharmacyUiComponent implements OnInit {
       this.isScanDischarge = false;
       this.isComingSoon = false;
       this.isGenLabel = true;
+    }
+    else if (selection == 'resetview'){
+      this.isScanPigeonHole=false;
+      this.isScanDischarge = false;
+      this.isComingSoon = false;
+      this.isGenLabel = false;
     }
 
   }

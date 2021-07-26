@@ -17,8 +17,8 @@ export class RunnerAppComponent implements OnInit {
 
   reset() {
     setTimeout(() => {
-      this.loadContent('comingsoon');
-    }, 3000);
+      this.loadContent('resetview');
+    }, 3500);
   }
 
   loadContent(selection: String)
@@ -36,6 +36,11 @@ export class RunnerAppComponent implements OnInit {
     else if (selection == 'comingsoon'){
       this.isidentifyLocation=false;
       this.isComingSoon = true;
+      this.isRetrieveItems = false;
+    }
+    else if (selection == 'resetview'){
+      this.isidentifyLocation=false;
+      this.isComingSoon = false;
       this.isRetrieveItems = false;
     }
   }
