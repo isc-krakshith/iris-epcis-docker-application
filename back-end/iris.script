@@ -5,7 +5,7 @@
     set namespace = "EPCIS"
     set $namespace=namespace
     set app = $System.CSP.GetDefaultApp(namespace) _ "/"
-    ;do EnableDeepSee^%SYS.cspServer(app)
+    do EnableDeepSee^%SYS.cspServer(app)
 
     zn "%SYS"
     Do ##class(Security.Users).UnExpireUserPasswords("*")
@@ -168,6 +168,9 @@
     set ^Ens.Configuration("csp","LastProduction") = production
     do ##class(Ens.Director).SetAutoStart(production)
     do ##class(Ens.Director).StartProduction(production)
+
+    do ##class(%DeepSee.Utils).%BuildCube("MedicinesTracking")
+
     set sc = 1
 
     halt

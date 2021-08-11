@@ -131,6 +131,7 @@ Method EventQuery(params As %ListOfObjects(ELEMENTTYPE="EPCIS.epcisq.QueryParam"
 	
 	// destination ( for T and T-1 )
 	kill id
+	/*
 	if (destination'="") {
 		set sql="select ID from EPCIS_epcis.ObjectEventType where extension_destinationList [ "_destination_" and (eventTime %STARTSWITH '"_$zd($h,3)_"' or eventTime %STARTSWITH '"_$zd(+$h-1,3)_"')"
 		set ^DEBUG=sql
@@ -152,6 +153,7 @@ Method EventQuery(params As %ListOfObjects(ELEMENTTYPE="EPCIS.epcisq.QueryParam"
 			}
 		}
 	}
+	*/
 	// transactions
 	
 	if (transactions'="") {

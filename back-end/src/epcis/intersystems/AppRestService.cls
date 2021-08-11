@@ -14,7 +14,7 @@ XData UrlMap [ XMLNamespace = "http://www.intersystems.com/urlmap" ]
      <Route Url="/demoStep6" Method="GET" Call="DemoLocationFriendlyName"/>
      <Route Url="/demoStep7" Method="GET" Call="DemoFHIR"/>
      <Route Url="/demoStep8" Method="POST" Call="DemoGenerateDischarge"/>
-
+     <Route Url="/demoStep9/:type" Method="GET" Call="DemoDispense"/>
    </Routes>
 }
 
@@ -109,6 +109,7 @@ ClassMethod GeneratePAS() As %String
 
 ClassMethod DemoGenerateAdmit() As %Status
 {
+	job ##class(EPCIS.intersystems.Populate).Populate()
 	set tSC=$$$OK
 	do $increment(^DEMO)
 	if ^DEMO=10 set ^DEMO=1
@@ -203,6 +204,7 @@ ClassMethod DemoLinkDocument() As %Status
 	
   	// Call the ProcessInput method of the business service 
   	Set tSC=tService.ProcessInput(tRequest,.output) 
+	do ##class(%DeepSee.Utils).%BuildCube("MedicinesTracking",1,0)
   	If ($$$ISERR(tSC)) Quit tSC
   	#dim output As Ens.Response
   	if $isobject(output) {
@@ -263,7 +265,7 @@ ClassMethod DemoPatientLocation() As %Status
 	quit tSC
 }
 
-ClassMethod DemoDispense() As %Status
+ClassMethod DemoDispense(type As %String = "arriving") As %Status
 {
 	set tSC=$$$OK
 	
@@ -283,10 +285,10 @@ ClassMethod DemoDispense() As %Status
   	set tObject.extension=tExt
   	do tObject.extension.destinationList.Insert(tDest)
   	do tObject.epcList.Insert("urn:epc:id:sscc:5520841.0"_^DEMO_"23456108")
-  	do tObject.epcList.Insert("urn:epc:id:sscc:5520841.0"_^DEMO_"23456108")
+  	do tObject.epcList.Insert("urn:epc:id:sscc:5520841.0"_^DEMO_"23456109")
 
   	set tObject.action="OBSERVE"
-  	set tObject.bizStep="urn:epcglobal:cbv:bizstep:departing"
+  	set tObject.bizStep="urn:epcglobal:cbv:bizstep:"_type
   	set tReadPoint=##class(EPCIS.epcis.ReadPointType).%New()
   	set tReadPoint.id="urn:epc:id:sgln:50552389.0520.0"
   	set tBizLocation=##class(EPCIS.epcis.BusinessLocationType).%New()
@@ -301,6 +303,7 @@ ClassMethod DemoDispense() As %Status
 	
   	// Call the ProcessInput method of the business service 
   	Set tSC=tService.ProcessInput(tRequest,.output) 
+	do ##class(%DeepSee.Utils).%BuildCube("MedicinesTracking",1,0)
   	If ($$$ISERR(tSC)) Quit tSC
   	#dim output As Ens.Response
   	if $isobject(output) {
@@ -332,10 +335,15 @@ ClassMethod DemoFHIR() As %Status
 	set tRequest=##class(EPCIS.intersystems.EventQueryRequest).%New()
 	set name="destination"
 	set value="'urn:epc:id:sgln:50552389.05340.0'"
+	
 	set param=##class(EPCIS.epcisq.QueryParam).%New()
 	set param.name=name
 	set param.value=value
 	do tRequest.QueryParams.Insert(param)
+	set param2=##class(EPCIS.epcisq.QueryParam).%New()
+	set param2.name="inpatientSpellId"
+	set param2.value="357327"_^DEMO
+	do tRequest.QueryParams.Insert(param2)
 	// Create the business service 
   	Set tSC=##class(Ens.Director).CreateBusinessService("App Query Service",.tService) 
   	If ($$$ISERR(tSC)) Quit tSC
