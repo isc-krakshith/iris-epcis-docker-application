@@ -70,6 +70,8 @@ export class RetrieveItemsComponent implements OnInit {
   checkAllComplete() {
     if (this.allComplete) {
       this.doneEvent.emit('retrieve-items')
+      //all items collected, set EPCIS bizstep to "departing"
+      this.setBizstepDeparting()
     }
   }
 
@@ -117,6 +119,16 @@ export class RetrieveItemsComponent implements OnInit {
     let quantity: string = data.substr((colPos+1), (clsBracePos-colPos-1))
     //console.log("quantity: ", quantity)
     return Number(quantity)
+  }
+
+  setBizstepDeparting() {
+    this.epcisIRISservice.setBizstepDeparting().subscribe((data: any) => {
+      //this.reset()
+      console.log("Bizstep set to departing", data, "success");
+
+    }, error => {
+      console.warn("There was an error in set bizstep departing process", error);
+    })
   }
   submitted = false;
 

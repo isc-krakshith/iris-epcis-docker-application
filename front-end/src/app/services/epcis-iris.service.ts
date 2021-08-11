@@ -156,7 +156,7 @@ export class EPCISIRISService {
   scanLocation(testPayload:any):Observable<any> {
     const headers = new HttpHeaders()
     let url = this.getServerAddress().concat('/query/demoStep6')
-    return this.http.get<any>(url,this.httpTextOptions)
+    return this.http.get<any>(url,testPayload)
     .pipe(
       tap((any: any) => this.log('Scan location : '+`${any}`)),
       //Sorry this is a hack... Complete REST response can be seen in the REST CALL LOGS TAB
@@ -181,6 +181,15 @@ export class EPCISIRISService {
         this.log('Retrieve Items : ' /*'+ `${any.error.error}` + " Response follows... : '*/ + `${any.error.text}`);
         return throwError(any);
       }))
+  }
+
+  setBizstepDeparting():Observable<any> {
+    const headers = new HttpHeaders()
+    let url = this.getServerAddress().concat('/query/demoStep9/departing')
+    return this.http.get<any>(url)
+    .pipe(
+      tap((bizstep: any) => this.log('BizStep Departing: ' + `${bizstep}`)),
+      catchError(this.handleError<any>('set bizStep departing')))
   }
 
   dischargePatient(admitForm: any):Observable<any> {
