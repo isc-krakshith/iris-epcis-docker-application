@@ -33,7 +33,7 @@
 					<li>GSRN (Global Service Relationship Number),</li> 
 					<li>SGLN (Specific Geographic Location Name),</li>
 					<li>URN (Uniform Resource Name)</li>
-					<li>corresponding business step defined for a healthcare application, &lsquo;accepting&rsquo; in this case.</li> 
+					<li>corresponding EPCIS business step defined for a healthcare application, &lsquo;accepting&rsquo; in this case.</li> 
 				</ul></li>
 		</ol>
 		</li>
@@ -47,6 +47,7 @@
 	<li>A hard copy of the discharge summary with prescriptions is digitally scanned by the pharmacy assistant to:
 	<ol class="list-lower-alpha">
 		<li>Link the prescription to the inpatient spell id</li>
+		<li>This registers the EPCIS business step, &lsquo;summarising discharge&rsquo;</li>
 	</ol>
 	</li>
 	<li>The pharmacy assistant then generates the label with a EPCIS compliant GDTI (Global Document Type Identifier) and SSCC (Serial Shipping Container Code) for the prescriptions to take away
@@ -62,6 +63,9 @@
 		<li>Fridge</li>
 		<li>Pigeonhole for the department where the patient is currently located.</li>
 	</ol>
+	<ul>
+		This registers the EPCIS buisness step &lsquo;arriving&rsquo;
+	</ul>
 	</li>
 	<li>The runner &ndash; who is presumably notified of the pending deliveries or may be making routine rounds across the facility &ndash; is equipped with a portable device which allows:
 	<ol class="list-lower-alpha">
@@ -72,6 +76,9 @@
 	</ol>
 	</li>
 	<li>Once the prescriptions have been delivered, the patient is discharged from hospital using the ADT entry UI</li>
+	<ul>
+		<li>The corresponding EPCIS business step - &lsquo;departing&rsquo; - is registered upon this event occurring.</li>
+	</ul>
 </ol>
 
 <h3>User Interface</h3>
@@ -149,7 +156,7 @@
 	<ul class="list-circle">
 		<li>The pharmacy assistant uses this to link the discharge document with the inpatient spell id for that patient visit by clicking the &lsquo;Scan&rsquo; button which changes to &lsquo;Capture&rsquo; when a dummy discharge document is displayed.</li>
 		<li>Click the &lsquo;Capture&rsquo; button. The discharge document disappears from view.</li>
-		<li>View the message trace in Management Portal before continuing with the next step.</li>
+		<li>View the message trace to find the EPCIS business step &lsquo;summarising_discharge&rsquo; in Management Portal before continuing with the next step.</li>
 	</ul>
 	</li>
 	<li>Dispense - &gt; Generate Label:
@@ -174,7 +181,7 @@
 		<li>When the barcode of the pigeon hole appears, the button caption changes to &lsquo;Capture&rsquo;. Clicking it links the pigeon-hole with the medicines.</li>
 		<li>Similarly, some medicines for the patient may be placed in a fridge and / or a controlled drugs safe; then those location barcodes would be scanned and linked to the patient as well.</li>
 		<li>In this demo, we only simulate the linking of the pigeon hole via this menu.</li>
-		<li>View the message trace in Management Portal before continuing with the next step.</li>
+		<li>View the message trace to find the EPCIS business step &lsquo;arriving&rsquo;, in Management Portal before continuing with the next step.</li>
 	</ul>
 	</li>
 </ul>
@@ -198,8 +205,15 @@
 		<li>By providing the location name for the destination, the runner is able to view a list and number of medicine bags for each of the locations from where the medications are to be collected. The checklist keeps track of the collections as the runner picks up medicines from each of the locations. When all the locations have been picked up from, the button becomes disabled.</li>
 		<li>View the message trace in Management Portal which shows a FHIR bundle with a host of information on the patient. As might be expected, only necessary information is displayed within the RUNNER APP.</li>
 	</ul>
+	<ul class="list-circle">
+		<li>Once all items have been marked as collected (all checkboxes checked), view the message trace in the Management Portal to see that a 'departing' business step has been logged</li>
+	</ul>
 	</li>
 </ul>
+
+<h4>ADMISSIONS / DISCHARGE</h4>
+
+<p>Finally the patient is discharged using the ADT UI and the message trace viewed in the Management Portal</p>
 
 <h4>REST CALL LOGS</h4>
 
