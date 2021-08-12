@@ -291,7 +291,10 @@ Method EventQuery(params As %ListOfObjects(ELEMENTTYPE="EPCIS.epcisq.QueryParam"
 			
 			//if $piece(obj.EPCISBody.EventList.ObjectEvent.GetAt(1).bizLocation.id,".") = $piece(location,".")
 			//{
-					do objs.Document.Insert(obj)
+				// for the demo, we are skipping the accepting bizStep	
+				//if objs.Document.GetAt(1).EPCISBody.EventList.ObjectEvent.GetAt(1).bizStep'="urn:epcglobal:cbv:bizstep:accepting"  
+				if (id>1)&&(i>1) do objs.Document.Insert(obj)
+				if id=1 do objs.Document.Insert(obj)
 			//}
 		}
 		
